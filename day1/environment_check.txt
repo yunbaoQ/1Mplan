@@ -1,0 +1,13 @@
+# conda environments:
+#
+# * -> active
+# + -> frozen
+base                 *   C:\ProgramData\anaconda3
+torch311                 C:\Users\IPIC-ZQY\.conda\envs\torch311
+
+python: C:\Users\IPIC-ZQY\.conda\envs\torch311\python.exe
+torch: 2.11.0+cu128
+torchvision: 0.26.0+cu128
+cuda_available: True
+torch_cuda_build: 12.8
+gpu: NVIDIA GeForce RTX 4070

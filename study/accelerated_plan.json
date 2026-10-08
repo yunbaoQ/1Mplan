@@ -1,0 +1,2506 @@
+{
+  "start_date": "2026-10-07",
+  "end_date": "2026-11-17",
+  "timezone": "Asia/Shanghai",
+  "duration_weeks": 6,
+  "baseline_days": 112,
+  "daily_days": 42,
+  "daily_budget": "普通日 6-7 小时，至多 1 小时选做；每第七天 2-3 小时复盘补缺。",
+  "mastery_rules": [
+    "已有能力通过简短解释和实际产出验收后可跳过，不重复刷时间。",
+    "同一天的多个学习块仍遵守先决条件；关键基础或正确性未过不能硬跳。",
+    "没有 GPU 时先做 CPU 正确性/模拟/源码，真实 GPU 与多卡性能验收保留为待验证。",
+    "若基础好且验收连续通过，可提前完成；42 天为冲刺目标，不是掌握保证。"
+  ],
+  "resources": {
+    "guide": "../output/pdf/01_AI_Infra_Campus_Guide_CN.pdf",
+    "sources": "../output/pdf/sources.md",
+    "pytorch": "https://docs.pytorch.org/tutorials/",
+    "ddp": "https://docs.pytorch.org/tutorials/intermediate/ddp_tutorial.html",
+    "triton": "https://triton-lang.org/main/getting-started/tutorials/index.html",
+    "vllm": "https://docs.vllm.ai/en/latest/",
+    "cs336": "https://cs336.stanford.edu/spring2025/",
+    "dlsys": "https://dlsyscourse.org/",
+    "gpu_mode": "https://github.com/gpu-mode/lectures"
+  },
+  "days": [
+    {
+      "day": 1,
+      "week": 1,
+      "date": "2026-10-07",
+      "baseline_days": [
+        1,
+        2,
+        3
+      ],
+      "title": "环境与能力盘点 / Python 数据结构与复杂度 / Python 文件与实验记录",
+      "blocks": [
+        {
+          "day": 1,
+          "week": 1,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-10-07",
+          "theme": "编程、环境与能力盘点",
+          "title": "环境与能力盘点",
+          "learn": "记录 Python/C++、Linux、算法、PyTorch 的现有水平，以及每天可投入时间；列出 CPU、内存、GPU 和可用开发环境",
+          "practice": "用已有 Python 运行一个脚本；已有 Git 则建立练习目录并保存笔记，无需先购买 GPU",
+          "deliverable": "baseline.md：基础、硬件、时间与一个可运行脚本",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 2,
+          "week": 1,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-10-08",
+          "theme": "编程、环境与能力盘点",
+          "title": "Python 数据结构与复杂度",
+          "learn": "复习 list、dict、set、deque 及常用操作的复杂度",
+          "practice": "实现词频统计与固定容量队列，补三个边界输入",
+          "deliverable": "python_basics.py + 复杂度说明",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 3,
+          "week": 1,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-10-09",
+          "theme": "编程、环境与能力盘点",
+          "title": "Python 文件与实验记录",
+          "learn": "练习 pathlib、JSON、CSV、异常处理和日志",
+          "practice": "将昨天程序改为可读取输入并输出 JSON 结果",
+          "deliverable": "输入样例、结果文件与异常处理说明",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 2,
+      "week": 1,
+      "date": "2026-10-08",
+      "baseline_days": [
+        4,
+        5,
+        6
+      ],
+      "title": "Linux 进程与文件 / C++ 内存与 RAII / 算法：哈希与 LRU",
+      "blocks": [
+        {
+          "day": 4,
+          "week": 1,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-10-10",
+          "theme": "编程、环境与能力盘点",
+          "title": "Linux 进程与文件",
+          "learn": "学习进程、权限、目录、标准输入输出；使用现有 Linux/WSL 或学校环境",
+          "practice": "观察一个自己运行的进程，记录 PID、CPU、内存和退出方式",
+          "deliverable": "linux_process.md；缺环境则记录安装需求，不强制当天安装",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 5,
+          "week": 1,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-10-11",
+          "theme": "编程、环境与能力盘点",
+          "title": "C++ 内存与 RAII",
+          "learn": "复习对象生命周期、引用、指针、vector、unique_ptr 与 RAII",
+          "practice": "实现一个小型缓存或资源管理示例；暂时不会 C++ 就先读懂示例并写伪代码",
+          "deliverable": "cpp_raii.cpp 或带解释的伪代码",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 6,
+          "week": 1,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-10-12",
+          "theme": "编程、环境与能力盘点",
+          "title": "算法：哈希与 LRU",
+          "learn": "学习哈希表、双向链表、LRU 淘汰过程",
+          "practice": "用熟悉语言实现 LRU，覆盖空容量、更新和淘汰",
+          "deliverable": "LRU 实现与边界用例",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 3,
+      "week": 1,
+      "date": "2026-10-09",
+      "baseline_days": [
+        7,
+        8,
+        9
+      ],
+      "title": "第 1 周复盘 / 进程、线程与同步 / 内存与 I/O",
+      "blocks": [
+        {
+          "day": 7,
+          "week": 1,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-10-13",
+          "theme": "编程、环境与能力盘点",
+          "title": "第 1 周复盘",
+          "learn": "回看本周产出，闭卷解释 Python 数据结构、进程和 RAII",
+          "practice": "补一个最薄弱的点，整理下周可投入时间",
+          "deliverable": "周复盘：完成、遗留、疑问、调整",
+          "minutes": 60,
+          "resource": "guide",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 8,
+          "week": 2,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-10-14",
+          "theme": "操作系统、网络与并发",
+          "title": "进程、线程与同步",
+          "learn": "理解进程/线程、锁、死锁与共享状态",
+          "practice": "实现线程安全计数或用最小示例复现竞态",
+          "deliverable": "并发示例 + 正确性解释",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 9,
+          "week": 2,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-10-15",
+          "theme": "操作系统、网络与并发",
+          "title": "内存与 I/O",
+          "learn": "学习虚拟内存、页缓存、文件描述符、缓冲",
+          "practice": "比较分块读文件与一次读入的时间和内存；使用小文件",
+          "deliverable": "memory_io.md + 简单测量",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 4,
+      "week": 1,
+      "date": "2026-10-10",
+      "baseline_days": [
+        10,
+        11,
+        12
+      ],
+      "title": "TCP、HTTP 与 RPC / 生产者消费者队列 / 超时、重试与幂等",
+      "blocks": [
+        {
+          "day": 10,
+          "week": 2,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-10-16",
+          "theme": "操作系统、网络与并发",
+          "title": "TCP、HTTP 与 RPC",
+          "learn": "画一次 HTTP 请求路径，理解连接、超时和连接复用",
+          "practice": "用本地客户端/服务端请求，记录状态码与耗时",
+          "deliverable": "请求路径图 + 本地请求日志",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 11,
+          "week": 2,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-10-17",
+          "theme": "操作系统、网络与并发",
+          "title": "生产者消费者队列",
+          "learn": "学习有界队列、吞吐、背压和等待",
+          "practice": "实现有限容量生产者消费者队列，观察队列积压",
+          "deliverable": "queue_demo.py + 队列长度记录",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-10-18",
+          "theme": "操作系统、网络与并发",
+          "title": "超时、重试与幂等",
+          "learn": "区分超时、重试和重复执行；理解退避",
+          "practice": "为本地模拟服务加入超时、有限重试与幂等键",
+          "deliverable": "故障模拟记录 + 重试策略",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 5,
+      "week": 1,
+      "date": "2026-10-11",
+      "baseline_days": [
+        13,
+        14,
+        15
+      ],
+      "title": "延迟分布与系统排障 / 第 2 周复盘 / 张量、shape 与 dtype",
+      "blocks": [
+        {
+          "day": 13,
+          "week": 2,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-10-19",
+          "theme": "操作系统、网络与并发",
+          "title": "延迟分布与系统排障",
+          "learn": "理解平均值、p50、p95、失败率；区分服务时间与排队时间",
+          "practice": "模拟突发负载并记录延迟，解释尾延迟来源",
+          "deliverable": "负载脚本 + 延迟表",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 14,
+          "week": 2,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-10-20",
+          "theme": "操作系统、网络与并发",
+          "title": "第 2 周复盘",
+          "learn": "闭卷说明死锁、背压、幂等与 p95",
+          "practice": "用昨天日志讲一次定位过程，补一项薄弱知识",
+          "deliverable": "周复盘 + 一张系统排障流程图",
+          "minutes": 60,
+          "resource": "guide",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 15,
+          "week": 3,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-10-21",
+          "theme": "PyTorch 与模型执行",
+          "title": "张量、shape 与 dtype",
+          "learn": "学习张量维度、广播、dtype、stride 与设备",
+          "practice": "做矩阵乘、转置、reshape 的小实验并标注 shape",
+          "deliverable": "tensor_shapes.py + shape 表",
+          "minutes": 110,
+          "resource": "pytorch",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 6,
+      "week": 1,
+      "date": "2026-10-12",
+      "baseline_days": [
+        16,
+        17
+      ],
+      "title": "autograd 与训练循环 / 线性层与模型状态",
+      "blocks": [
+        {
+          "day": 16,
+          "week": 3,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-10-22",
+          "theme": "PyTorch 与模型执行",
+          "title": "autograd 与训练循环",
+          "learn": "理解计算图、梯度、优化器和清零",
+          "practice": "用 CPU 跑一个极小训练循环，检查 loss 与梯度",
+          "deliverable": "train_tiny.py + loss 记录",
+          "minutes": 110,
+          "resource": "pytorch",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 17,
+          "week": 3,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-10-23",
+          "theme": "PyTorch 与模型执行",
+          "title": "线性层与模型状态",
+          "learn": "理解参数、梯度、优化器状态和张量字节数",
+          "practice": "估算一个小模型参数内存，并与实际张量大小核对",
+          "deliverable": "模型状态与内存估算表",
+          "minutes": 110,
+          "resource": "pytorch",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 7,
+      "week": 1,
+      "date": "2026-10-13",
+      "baseline_days": [
+        18,
+        19
+      ],
+      "title": "Attention 基本实现 / Transformer 前向路径",
+      "blocks": [
+        {
+          "day": 18,
+          "week": 3,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-10-24",
+          "theme": "PyTorch 与模型执行",
+          "title": "Attention 基本实现",
+          "learn": "理解 Q/K/V、缩放点积、softmax、因果 mask",
+          "practice": "实现小规模 attention，检查 shape 与 mask",
+          "deliverable": "attention_toy.py + 正确性检查",
+          "minutes": 110,
+          "resource": "pytorch",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 19,
+          "week": 3,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-10-25",
+          "theme": "PyTorch 与模型执行",
+          "title": "Transformer 前向路径",
+          "learn": "画 embedding、attention、MLP、residual、norm 的执行路径",
+          "practice": "阅读或运行一个小 Transformer，标注关键张量",
+          "deliverable": "forward_path.md + 执行示意图",
+          "minutes": 110,
+          "resource": "pytorch",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 150,
+      "target_minutes": 180,
+      "optional_minutes": 60,
+      "review_day": true,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 8,
+      "week": 2,
+      "date": "2026-10-14",
+      "baseline_days": [
+        20,
+        21,
+        22
+      ],
+      "title": "prefill 与 decode / 第 3 周复盘 / GPU 内存层次",
+      "blocks": [
+        {
+          "day": 20,
+          "week": 3,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-10-26",
+          "theme": "PyTorch 与模型执行",
+          "title": "prefill 与 decode",
+          "learn": "理解自回归生成、prefill、decode 与 KV Cache 的目的",
+          "practice": "用小例子计算有/无缓存时重复工作的区别",
+          "deliverable": "prefill_decode.md + 计算示例",
+          "minutes": 110,
+          "resource": "pytorch",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 21,
+          "week": 3,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-10-27",
+          "theme": "PyTorch 与模型执行",
+          "title": "第 3 周复盘",
+          "learn": "闭卷解释一次训练步骤和一次生成步骤",
+          "practice": "检查模型基础是否能支撑推理项目；补一个概念",
+          "deliverable": "周复盘 + 三分钟模型执行讲解",
+          "minutes": 60,
+          "resource": "pytorch",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 22,
+          "week": 4,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-10-28",
+          "theme": "GPU 架构与 profiling",
+          "title": "GPU 内存层次",
+          "learn": "学习 global/shared/register、SM、warp、block",
+          "practice": "将模型执行步骤映射到数据搬运与计算；无 GPU 时先做示意图",
+          "deliverable": "gpu_memory_map.md",
+          "minutes": 110,
+          "resource": "gpu_mode",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 9,
+      "week": 2,
+      "date": "2026-10-15",
+      "baseline_days": [
+        23,
+        24,
+        25
+      ],
+      "title": "并行与访存 / 异步执行与正确计时 / 算力与带宽瓶颈",
+      "blocks": [
+        {
+          "day": 23,
+          "week": 4,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-10-29",
+          "theme": "GPU 架构与 profiling",
+          "title": "并行与访存",
+          "learn": "理解线程索引、访问合并、分支发散与 occupancy",
+          "practice": "手推一个向量加法的线程分配和访存模式",
+          "deliverable": "vector_add_layout.md",
+          "minutes": 110,
+          "resource": "gpu_mode",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 24,
+          "week": 4,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-10-30",
+          "theme": "GPU 架构与 profiling",
+          "title": "异步执行与正确计时",
+          "learn": "理解 kernel launch、stream、同步与 CUDA events",
+          "practice": "有 GPU 时比较不同计时方式；无 GPU 时标出测量设计",
+          "deliverable": "gpu_timing.md + 可运行计时脚本或伪代码",
+          "minutes": 110,
+          "resource": "gpu_mode",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 25,
+          "week": 4,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-10-31",
+          "theme": "GPU 架构与 profiling",
+          "title": "算力与带宽瓶颈",
+          "learn": "理解算术强度与 roofline 的概念",
+          "practice": "估算向量加法/矩阵乘的数据访问与 FLOPs",
+          "deliverable": "bottleneck_estimates.md",
+          "minutes": 110,
+          "resource": "gpu_mode",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 10,
+      "week": 2,
+      "date": "2026-10-16",
+      "baseline_days": [
+        26,
+        27,
+        28
+      ],
+      "title": "第一次 profile / CPU/GPU 数据搬运 / 第 4 周复盘",
+      "blocks": [
+        {
+          "day": 26,
+          "week": 4,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-11-01",
+          "theme": "GPU 架构与 profiling",
+          "title": "第一次 profile",
+          "learn": "学习 PyTorch profiler；区分 CPU 调度、算子和拷贝",
+          "practice": "对小模型收集 profile；CPU 环境注明不能推出 GPU 结论",
+          "deliverable": "profile trace + 初步瓶颈说明",
+          "minutes": 110,
+          "resource": "gpu_mode",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 27,
+          "week": 4,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-11-02",
+          "theme": "GPU 架构与 profiling",
+          "title": "CPU/GPU 数据搬运",
+          "learn": "学习拷贝、同步、pinned memory 的概念",
+          "practice": "分析一段重复搬运代码；有 GPU 才做真实对比",
+          "deliverable": "transfer_analysis.md",
+          "minutes": 110,
+          "resource": "gpu_mode",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 28,
+          "week": 4,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-11-03",
+          "theme": "GPU 架构与 profiling",
+          "title": "第 4 周复盘",
+          "learn": "闭卷解释访存、异步计时与瓶颈判断",
+          "practice": "整理可用 GPU 条件；未获得 GPU 时列出后续待验证项",
+          "deliverable": "周复盘 + 硬件验证清单",
+          "minutes": 60,
+          "resource": "gpu_mode",
+          "optional": "可休息，或整理下周一项问题。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 11,
+      "week": 2,
+      "date": "2026-10-17",
+      "baseline_days": [
+        29,
+        30,
+        31
+      ],
+      "title": "向量加法正确基线 / 归约基线 / 归约访存优化",
+      "blocks": [
+        {
+          "day": 29,
+          "week": 5,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-11-04",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "向量加法正确基线",
+          "learn": "选择 Triton 或 CUDA 一种入口；阅读官方向量加法教程",
+          "practice": "实现/逐行解释 vector add，检查不同长度和边界",
+          "deliverable": "vector_add + correctness 记录",
+          "minutes": 110,
+          "resource": "triton",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 30,
+          "week": 5,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-11-05",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "归约基线",
+          "learn": "理解并行 reduction 与中间结果",
+          "practice": "实现/解释 sum reduction，检查多种 shape",
+          "deliverable": "reduce_baseline + shape 用例",
+          "minutes": 110,
+          "resource": "triton",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 31,
+          "week": 5,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-11-06",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "归约访存优化",
+          "learn": "学习 block size、访问合并与减少重复访存",
+          "practice": "只改变一个参数或策略，对比正确性和计时",
+          "deliverable": "reduce_results.csv + 单变量结论",
+          "minutes": 110,
+          "resource": "triton",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 12,
+      "week": 2,
+      "date": "2026-10-18",
+      "baseline_days": [
+        32,
+        33,
+        34
+      ],
+      "title": "Softmax 与融合 / 矩阵乘 tiling / 算子基准报告",
+      "blocks": [
+        {
+          "day": 32,
+          "week": 5,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-11-07",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "Softmax 与融合",
+          "learn": "理解 softmax 数值稳定性及 fusion 减少搬运",
+          "practice": "实现小型 softmax；对比参考结果与误差",
+          "deliverable": "softmax + 误差记录",
+          "minutes": 110,
+          "resource": "triton",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 33,
+          "week": 5,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-11-08",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "矩阵乘 tiling",
+          "learn": "学习分块、数据复用与边界处理",
+          "practice": "跑/解释官方小矩阵乘教程，画 tile 关系",
+          "deliverable": "matmul_layout.md + 示例结果",
+          "minutes": 110,
+          "resource": "triton",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 34,
+          "week": 5,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-11-09",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "算子基准报告",
+          "learn": "固定硬件、dtype、shape、warm-up 与计时口径",
+          "practice": "整理基线与改进；无 GPU 时明确全部性能为待验证",
+          "deliverable": "kernel_report.md",
+          "minutes": 110,
+          "resource": "triton",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 13,
+      "week": 2,
+      "date": "2026-10-19",
+      "baseline_days": [
+        35,
+        36
+      ],
+      "title": "第 5 周复盘 / 选择小模型与实验环境",
+      "blocks": [
+        {
+          "day": 35,
+          "week": 5,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-11-10",
+          "theme": "Triton/CUDA 小算子实践",
+          "title": "第 5 周复盘",
+          "learn": "闭卷解释优化为何有效、何时无效",
+          "practice": "整理一个算子项目小故事，选择推理作为后续主项目",
+          "deliverable": "周复盘 + 算子项目说明",
+          "minutes": 60,
+          "resource": "triton",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 36,
+          "week": 6,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-11-11",
+          "theme": "LLM 推理服务基线",
+          "title": "选择小模型与实验环境",
+          "learn": "核对可用显存、dtype、上下文与并发需求，选择可运行模型",
+          "practice": "记录模型来源/许可、引擎与驱动版本；没 GPU 先用 CPU 验证流程",
+          "deliverable": "environment.md + 资源估算",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 14,
+      "week": 2,
+      "date": "2026-10-20",
+      "baseline_days": [
+        37,
+        38
+      ],
+      "title": "跑通一次离线推理 / 启动本地推理服务",
+      "blocks": [
+        {
+          "day": 37,
+          "week": 6,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-11-12",
+          "theme": "LLM 推理服务基线",
+          "title": "跑通一次离线推理",
+          "learn": "用固定输入运行模型，记录输出、参数和启动步骤",
+          "practice": "保存可复现脚本与依赖；不先优化性能",
+          "deliverable": "offline_inference.py + 固定样例",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 38,
+          "week": 6,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-11-13",
+          "theme": "LLM 推理服务基线",
+          "title": "启动本地推理服务",
+          "learn": "阅读 vLLM 官方服务文档，理解启动参数与接口",
+          "practice": "在具备支持的环境运行服务；否则完成客户端与模拟服务",
+          "deliverable": "service_start + API 样例",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 150,
+      "target_minutes": 180,
+      "optional_minutes": 60,
+      "review_day": true,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 15,
+      "week": 3,
+      "date": "2026-10-21",
+      "baseline_days": [
+        39,
+        40,
+        41
+      ],
+      "title": "流式输出与首 token / 显存与上下文实验 / 基线配置冻结",
+      "blocks": [
+        {
+          "day": 39,
+          "week": 6,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-11-14",
+          "theme": "LLM 推理服务基线",
+          "title": "流式输出与首 token",
+          "learn": "理解流式响应、TTFT 与客户端测量边界",
+          "practice": "实现流式客户端，标注开始、首 token 和结束时间",
+          "deliverable": "stream_client.py + 时间记录",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 40,
+          "week": 6,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-11-15",
+          "theme": "LLM 推理服务基线",
+          "title": "显存与上下文实验",
+          "learn": "固定其他条件，对比少量上下文长度/输出长度",
+          "practice": "记录显存或设计待验证实验，不运行超出资源的配置",
+          "deliverable": "memory_context.csv + 解释",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 41,
+          "week": 6,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-11-16",
+          "theme": "LLM 推理服务基线",
+          "title": "基线配置冻结",
+          "learn": "整理模型、硬件、软件、输入和计时口径",
+          "practice": "建立 baseline 配置与一次可重复运行入口",
+          "deliverable": "baseline_config.json + README",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 16,
+      "week": 3,
+      "date": "2026-10-22",
+      "baseline_days": [
+        42,
+        43,
+        44
+      ],
+      "title": "第 6 周复盘 / 定义性能指标 / 设计请求负载",
+      "blocks": [
+        {
+          "day": 42,
+          "week": 6,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-11-17",
+          "theme": "LLM 推理服务基线",
+          "title": "第 6 周复盘",
+          "learn": "确认推理链路、版本和基线是否可复现",
+          "practice": "补环境/服务阻塞，决定下周能做真实还是模拟压测",
+          "deliverable": "周复盘 + 项目状态",
+          "minutes": 60,
+          "resource": "vllm",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 43,
+          "week": 7,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-11-18",
+          "theme": "压测与指标体系",
+          "title": "定义性能指标",
+          "learn": "明确 TTFT、TPOT、端到端延迟、吞吐和失败率",
+          "practice": "写指标定义与采集位置，避免混用请求/s 与 token/s",
+          "deliverable": "metrics.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 44,
+          "week": 7,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-11-19",
+          "theme": "压测与指标体系",
+          "title": "设计请求负载",
+          "learn": "定义输入/输出长度、请求数和随机种子",
+          "practice": "生成固定负载集，注明 tokenizer 与 token 长度",
+          "deliverable": "workload.jsonl + 负载统计",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 17,
+      "week": 3,
+      "date": "2026-10-23",
+      "baseline_days": [
+        45,
+        46,
+        47
+      ],
+      "title": "闭环并发压测 / 开环到达率压测 / 分位数与图表",
+      "blocks": [
+        {
+          "day": 45,
+          "week": 7,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-11-20",
+          "theme": "压测与指标体系",
+          "title": "闭环并发压测",
+          "learn": "理解固定并发客户端的限制",
+          "practice": "测试小范围并发梯度，收集原始请求日志",
+          "deliverable": "closed_loop.py + 原始日志",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 46,
+          "week": 7,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-11-21",
+          "theme": "压测与指标体系",
+          "title": "开环到达率压测",
+          "learn": "理解 arrival rate、排队与超载",
+          "practice": "实现受控到达率请求生成器，设置时间与请求上限",
+          "deliverable": "open_loop.py + 到达率日志",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 47,
+          "week": 7,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-11-22",
+          "theme": "压测与指标体系",
+          "title": "分位数与图表",
+          "learn": "计算 p50/p95、TTFT、TPOT 和吞吐",
+          "practice": "画延迟/吞吐随负载变化的图，记录失败和超时",
+          "deliverable": "结果图 + 指标表",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 18,
+      "week": 3,
+      "date": "2026-10-24",
+      "baseline_days": [
+        48,
+        49,
+        50
+      ],
+      "title": "warm-up 与重复实验 / 第 7 周复盘 / KV Cache 内存估算",
+      "blocks": [
+        {
+          "day": 48,
+          "week": 7,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-11-23",
+          "theme": "压测与指标体系",
+          "title": "warm-up 与重复实验",
+          "learn": "分析冷启动、warm-up、抖动与重复测量",
+          "practice": "重复小规模基线，记录差异和可复现条件",
+          "deliverable": "repeatability.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 49,
+          "week": 7,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-11-24",
+          "theme": "压测与指标体系",
+          "title": "第 7 周复盘",
+          "learn": "用结果解释饱和点与尾延迟",
+          "practice": "检查负载公平性、原始数据和指标定义，补一个测量缺陷",
+          "deliverable": "周复盘 + baseline_report.md",
+          "minutes": 60,
+          "resource": "vllm",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 50,
+          "week": 8,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-11-25",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "KV Cache 内存估算",
+          "learn": "理解层数、KV head、dtype、序列长度与并发对缓存大小的影响",
+          "practice": "为当前模型估算 KV Cache，并注明近似条件",
+          "deliverable": "kv_memory_estimate.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 19,
+      "week": 3,
+      "date": "2026-10-25",
+      "baseline_days": [
+        51,
+        52,
+        53
+      ],
+      "title": "PagedAttention / Continuous batching / Prefix cache",
+      "blocks": [
+        {
+          "day": 51,
+          "week": 8,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-11-26",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "PagedAttention",
+          "learn": "理解逻辑 token 块、物理块和块表",
+          "practice": "画请求增长/释放时缓存块的变化，与 FlashAttention 区分",
+          "deliverable": "paged_attention_diagram.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 52,
+          "week": 8,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-11-27",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "Continuous batching",
+          "learn": "理解请求加入/结束时的动态批处理",
+          "practice": "做一个玩具调度仿真，比较静态批与动态合批",
+          "deliverable": "batching_simulation.py",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 53,
+          "week": 8,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-11-28",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "Prefix cache",
+          "learn": "理解共享前缀、命中率与失效条件",
+          "practice": "构造共享/不共享前缀负载，保存公平对比设计",
+          "deliverable": "prefix_workloads + 实验设计",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 20,
+      "week": 3,
+      "date": "2026-10-26",
+      "baseline_days": [
+        54,
+        55
+      ],
+      "title": "缓存配置对比 / 项目基线总结",
+      "blocks": [
+        {
+          "day": 54,
+          "week": 8,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-11-29",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "缓存配置对比",
+          "learn": "固定负载、模型与硬件，比较缓存开/关",
+          "practice": "记录 TTFT、吞吐、显存与命中指标；无 GPU 标为待实测",
+          "deliverable": "prefix_cache_results.csv",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 55,
+          "week": 8,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-11-30",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "项目基线总结",
+          "learn": "汇总不同长度和并发下的结果与瓶颈",
+          "practice": "写一个失败或收益消失场景；不泛化单一 workload",
+          "deliverable": "inference_baseline_report.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 21,
+      "week": 3,
+      "date": "2026-10-27",
+      "baseline_days": [
+        56,
+        57
+      ],
+      "title": "第 8 周复盘 / 写优化假设",
+      "blocks": [
+        {
+          "day": 56,
+          "week": 8,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-12-01",
+          "theme": "KV Cache、batching 与缓存",
+          "title": "第 8 周复盘",
+          "learn": "闭卷解释 PagedAttention、FlashAttention、batching 与 prefix cache 的边界",
+          "practice": "选一个最有依据的瓶颈作为下阶段优化目标",
+          "deliverable": "周复盘 + 优化假设",
+          "minutes": 60,
+          "resource": "vllm",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 57,
+          "week": 9,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-12-02",
+          "theme": "推理主项目：验证一个优化",
+          "title": "写优化假设",
+          "learn": "明确瓶颈证据、预期收益和代价",
+          "practice": "只选择一项 batching/cache/调度参数改动，定义对照实验",
+          "deliverable": "optimization_hypothesis.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 150,
+      "target_minutes": 180,
+      "optional_minutes": 60,
+      "review_day": true,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 22,
+      "week": 4,
+      "date": "2026-10-28",
+      "baseline_days": [
+        58,
+        59,
+        60
+      ],
+      "title": "实施最小改动 / 长度梯度实验 / 负载梯度实验",
+      "blocks": [
+        {
+          "day": 58,
+          "week": 9,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-12-03",
+          "theme": "推理主项目：验证一个优化",
+          "title": "实施最小改动",
+          "learn": "记录参数/代码改动与回退办法",
+          "practice": "先验证正确性，再运行低负载冒烟",
+          "deliverable": "最小改动 + 验证记录",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 59,
+          "week": 9,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-12-04",
+          "theme": "推理主项目：验证一个优化",
+          "title": "长度梯度实验",
+          "learn": "对短/中/长输入与输出做控制变量实验",
+          "practice": "保留原始数据，不只选有利案例",
+          "deliverable": "length_sweep.csv",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 60,
+          "week": 9,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-12-05",
+          "theme": "推理主项目：验证一个优化",
+          "title": "负载梯度实验",
+          "learn": "对多个并发或 arrival rate 做公平比较",
+          "practice": "测吞吐、延迟、失败率和显存",
+          "deliverable": "load_sweep.csv",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 23,
+      "week": 4,
+      "date": "2026-10-29",
+      "baseline_days": [
+        61,
+        62,
+        63
+      ],
+      "title": "权衡与失败案例 / 结果与因果解释 / 第 9 周复盘",
+      "blocks": [
+        {
+          "day": 61,
+          "week": 9,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-12-06",
+          "theme": "推理主项目：验证一个优化",
+          "title": "权衡与失败案例",
+          "learn": "分析提高吞吐是否损害 TTFT/p95 或资源占用",
+          "practice": "复现一个收益有限或变差的条件",
+          "deliverable": "tradeoffs.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 62,
+          "week": 9,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-12-07",
+          "theme": "推理主项目：验证一个优化",
+          "title": "结果与因果解释",
+          "learn": "结合 profile 与日志解释改动作用位置",
+          "practice": "整理 baseline/优化图表并注明限制",
+          "deliverable": "optimization_report_v1.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 63,
+          "week": 9,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-12-08",
+          "theme": "推理主项目：验证一个优化",
+          "title": "第 9 周复盘",
+          "learn": "检查假设是否被数据支持",
+          "practice": "必要时否定原假设；安排一个小的后续实验",
+          "deliverable": "周复盘 + 下一步假设",
+          "minutes": 60,
+          "resource": "vllm",
+          "optional": "可休息，或整理下周一项问题。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 24,
+      "week": 4,
+      "date": "2026-10-30",
+      "baseline_days": [
+        64,
+        65,
+        66
+      ],
+      "title": "FlashAttention 原理 / 图与启动开销 / 量化与质量",
+      "blocks": [
+        {
+          "day": 64,
+          "week": 10,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-12-09",
+          "theme": "推理进阶与相邻能力",
+          "title": "FlashAttention 原理",
+          "learn": "理解 attention I/O、分块与在线 softmax",
+          "practice": "画数据搬运对比，不把它等同于 KV Cache 分页",
+          "deliverable": "flash_attention_notes.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 65,
+          "week": 10,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-12-10",
+          "theme": "推理进阶与相邻能力",
+          "title": "图与启动开销",
+          "learn": "学习 CUDA Graph 与 CPU/GPU 同步开销的作用条件",
+          "practice": "从 profile 判断项目是否涉及启动开销；无证据不强行加图",
+          "deliverable": "launch_overhead_analysis.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 66,
+          "week": 10,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-12-11",
+          "theme": "推理进阶与相邻能力",
+          "title": "量化与质量",
+          "learn": "理解权重/激活量化、dtype 与质量代价",
+          "practice": "设计小型质量样例与等价性检查，不只比较速度",
+          "deliverable": "quantization_evaluation_plan.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 25,
+      "week": 4,
+      "date": "2026-10-31",
+      "baseline_days": [
+        67,
+        68,
+        69
+      ],
+      "title": "投机解码概念 / Tensor Parallel 概念 / 选择一项可行进阶实验",
+      "blocks": [
+        {
+          "day": 67,
+          "week": 10,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-12-12",
+          "theme": "推理进阶与相邻能力",
+          "title": "投机解码概念",
+          "learn": "理解草稿生成、验证与接受率",
+          "practice": "画一次验证过程，解释接受率和草稿开销的关系",
+          "deliverable": "speculative_decode.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 68,
+          "week": 10,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-12-13",
+          "theme": "推理进阶与相邻能力",
+          "title": "Tensor Parallel 概念",
+          "learn": "理解线性层切分和集合通信位置",
+          "practice": "画单卡/双卡执行差异；没有双卡不声称多卡性能",
+          "deliverable": "tp_execution_map.md",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 69,
+          "week": 10,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-12-14",
+          "theme": "推理进阶与相邻能力",
+          "title": "选择一项可行进阶实验",
+          "learn": "按当前 GPU 与基础只选择前述一项适用实验",
+          "practice": "若都不适用则继续打磨第 9 周主优化的边界测试",
+          "deliverable": "进阶实验或边界测试报告",
+          "minutes": 110,
+          "resource": "vllm",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 26,
+      "week": 4,
+      "date": "2026-11-01",
+      "baseline_days": [
+        70,
+        71,
+        72
+      ],
+      "title": "第 10 周复盘 / DDP 与状态分类 / 跑通分布式正确性",
+      "blocks": [
+        {
+          "day": 70,
+          "week": 10,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-12-15",
+          "theme": "推理进阶与相邻能力",
+          "title": "第 10 周复盘",
+          "learn": "能解释四种优化适用条件与代价",
+          "practice": "决定哪些保留在简历主线，哪些仅作理解",
+          "deliverable": "周复盘 + 项目范围",
+          "minutes": 60,
+          "resource": "vllm",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 71,
+          "week": 11,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-12-16",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "DDP 与状态分类",
+          "learn": "理解参数、梯度、优化器状态和数据并行",
+          "practice": "画一次 DDP 梯度同步时序",
+          "deliverable": "ddp_timeline.md",
+          "minutes": 110,
+          "resource": "ddp",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 72,
+          "week": 11,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-12-17",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "跑通分布式正确性",
+          "learn": "阅读 PyTorch DDP 官方教程",
+          "practice": "有多 GPU 跑小实验；否则用 CPU gloo 验证进程通信并注明局限",
+          "deliverable": "ddp_tiny.py + 环境说明",
+          "minutes": 110,
+          "resource": "ddp",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 27,
+      "week": 4,
+      "date": "2026-11-02",
+      "baseline_days": [
+        73,
+        74
+      ],
+      "title": "AllReduce 与通信 / FSDP 与 ZeRO 思想",
+      "blocks": [
+        {
+          "day": 73,
+          "week": 11,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-12-18",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "AllReduce 与通信",
+          "learn": "理解 collective 的数学结果和通信路径",
+          "practice": "手推 2-4 个 rank 的梯度聚合，检查训练结果",
+          "deliverable": "allreduce_example.md",
+          "minutes": 110,
+          "resource": "ddp",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 74,
+          "week": 11,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-12-19",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "FSDP 与 ZeRO 思想",
+          "learn": "区分参数/梯度/优化器状态分片",
+          "practice": "画 DDP 与分片状态对比，估算内存",
+          "deliverable": "sharding_table.md",
+          "minutes": 110,
+          "resource": "ddp",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 28,
+      "week": 4,
+      "date": "2026-11-03",
+      "baseline_days": [
+        75,
+        76
+      ],
+      "title": "checkpoint 与恢复 / 计算通信重叠",
+      "blocks": [
+        {
+          "day": 75,
+          "week": 11,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-12-20",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "checkpoint 与恢复",
+          "learn": "保存并恢复模型、优化器、步数与随机状态",
+          "practice": "对比连续训练与恢复训练的小规模结果",
+          "deliverable": "checkpoint_demo.py + 恢复记录",
+          "minutes": 110,
+          "resource": "ddp",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 76,
+          "week": 11,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-12-21",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "计算通信重叠",
+          "learn": "理解 bucket、等待和并行策略权衡",
+          "practice": "从 trace/文献示意定位通信；无法实测时写验证方案",
+          "deliverable": "communication_analysis.md",
+          "minutes": 110,
+          "resource": "ddp",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 150,
+      "target_minutes": 180,
+      "optional_minutes": 60,
+      "review_day": true,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 29,
+      "week": 5,
+      "date": "2026-11-04",
+      "baseline_days": [
+        77,
+        78,
+        79
+      ],
+      "title": "第 11 周复盘 / 容器与可复现环境 / 资源队列与配额",
+      "blocks": [
+        {
+          "day": 77,
+          "week": 11,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-12-22",
+          "theme": "训练通信基础：小型 DDP",
+          "title": "第 11 周复盘",
+          "learn": "闭卷解释 DDP、FSDP、ZeRO、TP、PP 的区别",
+          "practice": "将训练知识与推理项目边界连起来，补一个薄弱点",
+          "deliverable": "周复盘 + 并行策略图",
+          "minutes": 60,
+          "resource": "ddp",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 78,
+          "week": 12,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-12-23",
+          "theme": "服务稳定性与平台基础",
+          "title": "容器与可复现环境",
+          "learn": "理解镜像、容器、挂载和 GPU runtime",
+          "practice": "整理现有服务的依赖/启动配置；可用时构建小镜像",
+          "deliverable": "部署说明或 Dockerfile",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 79,
+          "week": 12,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-12-24",
+          "theme": "服务稳定性与平台基础",
+          "title": "资源队列与配额",
+          "learn": "学习请求队列上限、超时、取消和资源配额",
+          "practice": "为模拟/真实服务加入有限队列，测试取消与超载",
+          "deliverable": "queue_policy.md + 用例",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 30,
+      "week": 5,
+      "date": "2026-11-05",
+      "baseline_days": [
+        80,
+        81,
+        82
+      ],
+      "title": "监控与告警 / 故障恢复实验 / K8s 与 GPU 调度概念",
+      "blocks": [
+        {
+          "day": 80,
+          "week": 12,
+          "weekday_in_plan": 3,
+          "baseline_date": "2026-12-25",
+          "theme": "服务稳定性与平台基础",
+          "title": "监控与告警",
+          "learn": "选择请求率、失败率、延迟、队列和 GPU/内存指标",
+          "practice": "给服务增加最小指标输出与日志关联",
+          "deliverable": "metrics endpoint 或监控样例",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 81,
+          "week": 12,
+          "weekday_in_plan": 4,
+          "baseline_date": "2026-12-26",
+          "theme": "服务稳定性与平台基础",
+          "title": "故障恢复实验",
+          "learn": "明确自己服务的崩溃、重启和状态丢失场景",
+          "practice": "仅对练习服务演练一次失败与恢复，保留时间线",
+          "deliverable": "failure_recovery.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 82,
+          "week": 12,
+          "weekday_in_plan": 5,
+          "baseline_date": "2026-12-27",
+          "theme": "服务稳定性与平台基础",
+          "title": "K8s 与 GPU 调度概念",
+          "learn": "理解 Pod、Deployment、Service、requests/limits、GPU 资源",
+          "practice": "画单服务部署与 GPU 任务排队图，已有集群时再运行",
+          "deliverable": "k8s_deployment_notes.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 31,
+      "week": 5,
+      "date": "2026-11-06",
+      "baseline_days": [
+        83,
+        84,
+        85
+      ],
+      "title": "稳定性报告 / 第 12 周复盘 / 选一个源码入口",
+      "blocks": [
+        {
+          "day": 83,
+          "week": 12,
+          "weekday_in_plan": 6,
+          "baseline_date": "2026-12-28",
+          "theme": "服务稳定性与平台基础",
+          "title": "稳定性报告",
+          "learn": "说明限流、背压、恢复如何影响主项目指标",
+          "practice": "整理两种故障场景与恢复结果",
+          "deliverable": "reliability_report.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 84,
+          "week": 12,
+          "weekday_in_plan": 7,
+          "baseline_date": "2026-12-29",
+          "theme": "服务稳定性与平台基础",
+          "title": "第 12 周复盘",
+          "learn": "以系统设计方式讲服务、队列、资源与失败处理",
+          "practice": "清理未验证的生产规模声称，列出项目实际边界",
+          "deliverable": "周复盘 + 架构图",
+          "minutes": 60,
+          "resource": "guide",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 85,
+          "week": 13,
+          "weekday_in_plan": 1,
+          "baseline_date": "2026-12-30",
+          "theme": "阅读源码与系统解释",
+          "title": "选一个源码入口",
+          "learn": "固定引擎版本，选择调度、KV Cache 或指标采集中的一个小功能",
+          "practice": "找到实际入口与关键类/函数，记录 commit 或版本",
+          "deliverable": "source_entry.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 32,
+      "week": 5,
+      "date": "2026-11-07",
+      "baseline_days": [
+        86,
+        87,
+        88
+      ],
+      "title": "追一条调用链 / 连接源码与实验 / 最小复现",
+      "blocks": [
+        {
+          "day": 86,
+          "week": 13,
+          "weekday_in_plan": 2,
+          "baseline_date": "2026-12-31",
+          "theme": "阅读源码与系统解释",
+          "title": "追一条调用链",
+          "learn": "沿入口到核心处理路径阅读，标注状态变化",
+          "practice": "画调用链与数据结构，不要求通读整个仓库",
+          "deliverable": "call_chain.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 87,
+          "week": 13,
+          "weekday_in_plan": 3,
+          "baseline_date": "2027-01-01",
+          "theme": "阅读源码与系统解释",
+          "title": "连接源码与实验",
+          "learn": "将第 8-9 周的一项观察映射到源码机制",
+          "practice": "记录对应函数、条件和实验现象，区分推测与已验证",
+          "deliverable": "source_to_experiment.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 88,
+          "week": 13,
+          "weekday_in_plan": 4,
+          "baseline_date": "2027-01-02",
+          "theme": "阅读源码与系统解释",
+          "title": "最小复现",
+          "learn": "为一个边界或异常输入构造最小复现",
+          "practice": "记录预期、实际、版本和触发条件；没有 bug 也可做行为验证",
+          "deliverable": "minimal_repro + 说明",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 33,
+      "week": 5,
+      "date": "2026-11-08",
+      "baseline_days": [
+        89,
+        90,
+        91
+      ],
+      "title": "小改进或文档澄清 / 复核解释 / 第 13 周复盘",
+      "blocks": [
+        {
+          "day": 89,
+          "week": 13,
+          "weekday_in_plan": 5,
+          "baseline_date": "2027-01-03",
+          "theme": "阅读源码与系统解释",
+          "title": "小改进或文档澄清",
+          "learn": "选择自己能验证的日志、测试、文档或小修复",
+          "practice": "在练习分支准备可审阅改动；无需现在向他人发消息",
+          "deliverable": "diff + 验证记录",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 90,
+          "week": 13,
+          "weekday_in_plan": 6,
+          "baseline_date": "2027-01-04",
+          "theme": "阅读源码与系统解释",
+          "title": "复核解释",
+          "learn": "重新检查调用链、实验与结论一致性",
+          "practice": "写五分钟源码讲解，标注尚未理解的部分",
+          "deliverable": "source_walkthrough.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 91,
+          "week": 13,
+          "weekday_in_plan": 7,
+          "baseline_date": "2027-01-05",
+          "theme": "阅读源码与系统解释",
+          "title": "第 13 周复盘",
+          "learn": "闭卷沿调用链解释一次请求/一次调度",
+          "practice": "汇总阅读收益与待补点，收敛项目说明",
+          "deliverable": "周复盘 + 源码问答",
+          "minutes": 60,
+          "resource": "guide",
+          "optional": "可休息，或整理下周一项问题。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 34,
+      "week": 5,
+      "date": "2026-11-09",
+      "baseline_days": [
+        92,
+        93
+      ],
+      "title": "README 可复现入口 / 数据与图表审核",
+      "blocks": [
+        {
+          "day": 92,
+          "week": 14,
+          "weekday_in_plan": 1,
+          "baseline_date": "2027-01-06",
+          "theme": "交付、报告与简历材料",
+          "title": "README 可复现入口",
+          "learn": "为陌生读者写环境、安装、运行、负载和复现步骤",
+          "practice": "从干净目录/环境验证一条小规模复现路径",
+          "deliverable": "README.md + 复现日志",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 93,
+          "week": 14,
+          "weekday_in_plan": 2,
+          "baseline_date": "2027-01-07",
+          "theme": "交付、报告与简历材料",
+          "title": "数据与图表审核",
+          "learn": "检查单位、坐标、分位数、负载和 baseline 公平性",
+          "practice": "让每张结果图追溯到原始数据与脚本",
+          "deliverable": "final_figures + 数据索引",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 35,
+      "week": 5,
+      "date": "2026-11-10",
+      "baseline_days": [
+        94,
+        95
+      ],
+      "title": "报告成稿 / 项目讲解三种长度",
+      "blocks": [
+        {
+          "day": 94,
+          "week": 14,
+          "weekday_in_plan": 3,
+          "baseline_date": "2027-01-08",
+          "theme": "交付、报告与简历材料",
+          "title": "报告成稿",
+          "learn": "写问题、方案、实验、结果、代价与局限",
+          "practice": "保留失败实验与否定假设，不制造提升数字",
+          "deliverable": "final_report.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 95,
+          "week": 14,
+          "weekday_in_plan": 4,
+          "baseline_date": "2027-01-09",
+          "theme": "交付、报告与简历材料",
+          "title": "项目讲解三种长度",
+          "learn": "准备 30 秒、3 分钟、10 分钟介绍",
+          "practice": "录音或写逐字提纲，突出自己的实现和判断",
+          "deliverable": "project_pitch.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 150,
+      "target_minutes": 180,
+      "optional_minutes": 60,
+      "review_day": true,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 36,
+      "week": 6,
+      "date": "2026-11-11",
+      "baseline_days": [
+        96,
+        97,
+        98
+      ],
+      "title": "简历项目条目 / 开源贡献准备 / 第 14 周复盘",
+      "blocks": [
+        {
+          "day": 96,
+          "week": 14,
+          "weekday_in_plan": 5,
+          "baseline_date": "2027-01-10",
+          "theme": "交付、报告与简历材料",
+          "title": "简历项目条目",
+          "learn": "用真实环境、负载与结果写两条简历描述",
+          "practice": "逐条检查是否能被代码/日志支持",
+          "deliverable": "resume_project_bullets.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 97,
+          "week": 14,
+          "weekday_in_plan": 6,
+          "baseline_date": "2027-01-11",
+          "theme": "交付、报告与简历材料",
+          "title": "开源贡献准备",
+          "learn": "如有可验证小改动，整理补丁、复现和验证说明",
+          "practice": "检查目标项目 CONTRIBUTING；准备草稿，发布前按当时授权处理",
+          "deliverable": "contribution_draft.md",
+          "minutes": 110,
+          "resource": "guide",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 98,
+          "week": 14,
+          "weekday_in_plan": 7,
+          "baseline_date": "2027-01-12",
+          "theme": "交付、报告与简历材料",
+          "title": "第 14 周复盘",
+          "learn": "验收项目代码、报告、图表和讲解完整性",
+          "practice": "列出面试最可能追问的五个缺口",
+          "deliverable": "周复盘 + 面试缺口表",
+          "minutes": 60,
+          "resource": "guide",
+          "optional": "可休息，或整理下周一项问题。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 37,
+      "week": 6,
+      "date": "2026-11-12",
+      "baseline_days": [
+        99,
+        100,
+        101
+      ],
+      "title": "目标岗位矩阵 / 算法：链表与缓存 / OS 与并发问答",
+      "blocks": [
+        {
+          "day": 99,
+          "week": 15,
+          "weekday_in_plan": 1,
+          "baseline_date": "2027-01-13",
+          "theme": "面试基础与岗位匹配",
+          "title": "目标岗位矩阵",
+          "learn": "选 5-10 个官方校招/实习 JD，确认方向与招聘状态",
+          "practice": "记录共同要求、差距、截止时间和官方链接",
+          "deliverable": "target_jobs.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 100,
+          "week": 15,
+          "weekday_in_plan": 2,
+          "baseline_date": "2027-01-14",
+          "theme": "面试基础与岗位匹配",
+          "title": "算法：链表与缓存",
+          "learn": "练习 LRU、链表或队列中的两道目标难度题",
+          "practice": "解释复杂度与边界，避免只记题解",
+          "deliverable": "算法代码 + 自评",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 101,
+          "week": 15,
+          "weekday_in_plan": 3,
+          "baseline_date": "2027-01-15",
+          "theme": "面试基础与岗位匹配",
+          "title": "OS 与并发问答",
+          "learn": "闭卷回答进程/线程、锁、死锁、内存与 I/O",
+          "practice": "针对一个错误回答用小实验补证",
+          "deliverable": "os_interview_notes.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 38,
+      "week": 6,
+      "date": "2026-11-13",
+      "baseline_days": [
+        102,
+        103,
+        104
+      ],
+      "title": "网络与分布式问答 / GPU 与模型问答 / 项目压力追问",
+      "blocks": [
+        {
+          "day": 102,
+          "week": 15,
+          "weekday_in_plan": 4,
+          "baseline_date": "2027-01-16",
+          "theme": "面试基础与岗位匹配",
+          "title": "网络与分布式问答",
+          "learn": "回答超时、重试、幂等、背压、尾延迟",
+          "practice": "设计一个过载推理服务，说明故障处理",
+          "deliverable": "system_design_draft.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 103,
+          "week": 15,
+          "weekday_in_plan": 5,
+          "baseline_date": "2027-01-17",
+          "theme": "面试基础与岗位匹配",
+          "title": "GPU 与模型问答",
+          "learn": "回答访存、同步、prefill/decode、KV Cache 与 batching",
+          "practice": "用自己 profile 或结果支撑至少三个回答",
+          "deliverable": "gpu_inference_qa.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 104,
+          "week": 15,
+          "weekday_in_plan": 6,
+          "baseline_date": "2027-01-18",
+          "theme": "面试基础与岗位匹配",
+          "title": "项目压力追问",
+          "learn": "回答为何这样做、替代方案、失败条件、自己贡献和测量可靠性",
+          "practice": "找出无法回答的两点，补材料",
+          "deliverable": "project_questions.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 39,
+      "week": 6,
+      "date": "2026-11-14",
+      "baseline_days": [
+        105,
+        106,
+        107
+      ],
+      "title": "第 15 周复盘 / 简历终审 / 模拟面试一",
+      "blocks": [
+        {
+          "day": 105,
+          "week": 15,
+          "weekday_in_plan": 7,
+          "baseline_date": "2027-01-19",
+          "theme": "面试基础与岗位匹配",
+          "title": "第 15 周复盘",
+          "learn": "模拟 30 分钟技术面并自评",
+          "practice": "根据目标岗位调整最后一周重点，不盲目新增大项目",
+          "deliverable": "周复盘 + 最后一周重点",
+          "minutes": 60,
+          "resource": "sources",
+          "optional": "可休息，或整理下周一项问题。"
+        },
+        {
+          "day": 106,
+          "week": 16,
+          "weekday_in_plan": 1,
+          "baseline_date": "2027-01-20",
+          "theme": "模拟面试、投递与结项",
+          "title": "简历终审",
+          "learn": "检查技术栈、项目结果、措辞与校招匹配",
+          "practice": "输出一版可投递简历内容；删掉不实或无法解释的内容",
+          "deliverable": "resume_final_notes.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 107,
+          "week": 16,
+          "weekday_in_plan": 2,
+          "baseline_date": "2027-01-21",
+          "theme": "模拟面试、投递与结项",
+          "title": "模拟面试一",
+          "learn": "进行算法/基础/项目综合模拟",
+          "practice": "记录回答漏洞、时间分配与追问",
+          "deliverable": "mock_interview_1.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 40,
+      "week": 6,
+      "date": "2026-11-15",
+      "baseline_days": [
+        108,
+        109
+      ],
+      "title": "针对性补弱 / 推理系统设计模拟",
+      "blocks": [
+        {
+          "day": 108,
+          "week": 16,
+          "weekday_in_plan": 3,
+          "baseline_date": "2027-01-22",
+          "theme": "模拟面试、投递与结项",
+          "title": "针对性补弱",
+          "learn": "只处理昨日最重要的两个知识或项目缺口",
+          "practice": "做一个小练习或补充实验验证",
+          "deliverable": "gap_fixes.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 109,
+          "week": 16,
+          "weekday_in_plan": 4,
+          "baseline_date": "2027-01-23",
+          "theme": "模拟面试、投递与结项",
+          "title": "推理系统设计模拟",
+          "learn": "设计不同长度和负载的推理服务，讨论缓存、batching、限流与监控",
+          "practice": "讲清性能目标和取舍，不泛化模型/硬件",
+          "deliverable": "inference_design_final.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 41,
+      "week": 6,
+      "date": "2026-11-16",
+      "baseline_days": [
+        110,
+        111
+      ],
+      "title": "投递材料与跟踪 / 模拟面试二",
+      "blocks": [
+        {
+          "day": 110,
+          "week": 16,
+          "weekday_in_plan": 5,
+          "baseline_date": "2027-01-24",
+          "theme": "模拟面试、投递与结项",
+          "title": "投递材料与跟踪",
+          "learn": "核验官方申请页面、简历版本与项目链接",
+          "practice": "准备或按用户当时授权完成投递，建立状态表",
+          "deliverable": "application_tracker.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        },
+        {
+          "day": 111,
+          "week": 16,
+          "weekday_in_plan": 6,
+          "baseline_date": "2027-01-25",
+          "theme": "模拟面试、投递与结项",
+          "title": "模拟面试二",
+          "learn": "围绕目标岗位进行最后一次模拟",
+          "practice": "比较第一次表现，整理入职/实习还需补的点",
+          "deliverable": "mock_interview_2.md",
+          "minutes": 110,
+          "resource": "sources",
+          "optional": "若必做已完成，花 15-20 分钟做一题算法或深入一个相关概念；不是追加必做。"
+        }
+      ],
+      "minimum_minutes": 360,
+      "target_minutes": 390,
+      "optional_minutes": 60,
+      "review_day": false,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    },
+    {
+      "day": 42,
+      "week": 6,
+      "date": "2026-11-17",
+      "baseline_days": [
+        112
+      ],
+      "title": "16 周结项与后续",
+      "blocks": [
+        {
+          "day": 112,
+          "week": 16,
+          "weekday_in_plan": 7,
+          "baseline_date": "2027-01-26",
+          "theme": "模拟面试、投递与结项",
+          "title": "16 周结项与后续",
+          "learn": "汇总完成、项目证据、仍未完成内容与求职反馈",
+          "practice": "形成下一阶段建议；提醒计划到期，不自动延长",
+          "deliverable": "final_review.md",
+          "minutes": 60,
+          "resource": "sources",
+          "optional": "可休息，或整理下周一项问题。"
+        }
+      ],
+      "minimum_minutes": 150,
+      "target_minutes": 180,
+      "optional_minutes": 60,
+      "review_day": true,
+      "daily_extras": [
+        "算法或面试基础：普通日 40-60 分钟，围绕当前薄弱点。",
+        "实验记录、口头解释与自测：20-30 分钟。",
+        "如基准学习块不足时间，用代码实现、边界检查、复现实验深化；不为凑时间增加无关内容。"
+      ]
+    }
+  ]
+}

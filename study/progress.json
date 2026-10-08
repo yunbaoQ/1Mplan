@@ -1,0 +1,132 @@
+{
+  "timezone": "Asia/Shanghai",
+  "start_date": "2026-10-07",
+  "end_date": "2026-11-17",
+  "planned_day_cursor": 1,
+  "completed_days": [],
+  "partial_days": {
+    "1": {
+      "completed": [
+        "capability_self_report",
+        "practice_directory_and_task_file",
+        "environment_verification"
+      ],
+      "pending": [
+        "hardware_basics",
+        "python_practice",
+        "git_linux_practice",
+        "cpp_algorithm_selftest"
+      ],
+      "full_daily_report": true,
+      "A_review": {
+        "environment": "passed_from_saved_output_and_notebook",
+        "hardware": "needs_revision",
+        "review_file": "../day1/A_review.md",
+        "missing_inventory": [
+          "CPU model",
+          "RAM capacity"
+        ],
+        "full_daily_report": false
+      },
+      "submitted": [
+        "A_environment_and_hardware"
+      ],
+      "report_source": "User confirmed only A submitted, later tasks not completed; branch day1 and saved artifacts reviewed",
+      "summary_file": "../day1/summary_2026-10-07.md",
+      "actual_minutes": null,
+      "task_status": {
+        "A": "submitted; environment passed; hardware correction pending",
+        "B": "not_completed",
+        "C": "not_completed",
+        "D": "not_completed"
+      }
+    }
+  },
+  "blockers": [],
+  "extra_completed": [
+    "PyTorch tensor tutorial notebook: initial practice reviewed, mastery and training not yet assessed"
+  ],
+  "available_minutes": 390,
+  "reported_dates": [
+    "2026-10-07"
+  ],
+  "morning_sent_dates": [
+    "2026-10-07",
+    "2026-10-08"
+  ],
+  "evening_sent_dates": [
+    "2026-10-07"
+  ],
+  "last_processed_report": "2026-10-07 main-chat daily summary: only A submitted, B/C/D not completed",
+  "next_day_draft": {
+    "date": "2026-10-08",
+    "assignment_day": 2,
+    "file": "../day2/today_2026-10-08.md",
+    "minutes": 390,
+    "blocks": [
+      {
+        "topic": "Hardware correction and device self-check",
+        "minutes": 60
+      },
+      {
+        "topic": "Python word count",
+        "minutes": 150
+      },
+      {
+        "topic": "Git and Linux practice",
+        "minutes": 150
+      },
+      {
+        "topic": "C++ algorithm and review",
+        "minutes": 30
+      }
+    ],
+    "deferred": [
+      "C++ RAII new module",
+      "LRU new implementation"
+    ],
+    "basis": "Carry unfinished Day 1 tasks; do not advance curriculum without assessment",
+    "status": "assigned_at_morning"
+  },
+  "notes": "2026-10-08 morning: prepared Day 2 assignment issued, 390 minutes. Day 1 A environment passed but hardware correction pending; B/C/D carried forward. No new report; mastery cursors remain 1.",
+  "active_plan": "accelerated_plan.json",
+  "duration_weeks": 6,
+  "baseline_day_cursor": 1,
+  "automation_ids": {
+    "morning": "ai-infra",
+    "evening": "ai-infra-22-30"
+  },
+  "today_assignment": "../day2/today_2026-10-08.md",
+  "baseline_profile": "baseline.md",
+  "reminder_schedule": {
+    "timezone": "Asia/Shanghai",
+    "morning": "08:00 daily",
+    "evening": "22:30 daily",
+    "daytime_polling": false
+  },
+  "hardware": {
+    "gpu_name": "NVIDIA GeForce RTX 4070",
+    "gpu_memory_bytes": null,
+    "cpu_model": null,
+    "ram_bytes": null,
+    "evidence": "day1/environment_check.txt"
+  },
+  "environment": {
+    "python_environment": "torch311",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "cuda_available": true,
+    "torch_cuda_build": "12.8",
+    "validation": "saved import/device output, no rerun"
+  },
+  "assignment_day_cursor": 2,
+  "daily_report_status": {
+    "2026-10-07": {
+      "type": "manual_summary",
+      "all_task_statuses_reported": true,
+      "all_tasks_completed": false,
+      "summary_file": "../day1/summary_2026-10-07.md",
+      "hours_reported": false
+    }
+  }
+}

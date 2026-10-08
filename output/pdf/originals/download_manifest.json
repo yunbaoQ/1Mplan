@@ -1,0 +1,35 @@
+[
+  {
+    "file": "03_LLM_Inference_Systems_Survey_2506.21901.pdf",
+    "title": "A Survey of LLM Inference Systems",
+    "source": "https://arxiv.org/pdf/2506.21901",
+    "resolved_url": "https://arxiv.org/pdf/2506.21901",
+    "retrieved": "2026-10-07",
+    "bytes": 3014813,
+    "pages": 25,
+    "sha256": "3471859ed84c8f6b49a67bb1740d7584a1fe026d47cc1c2dbd2cb3f49584494b",
+    "first_page_excerpt": "arXiv:2506.21901v1  [cs.DB]  27 Jun 2025\nA Survey of LLM Inference Systems\nJames Pan · Guoliang Li\nAbstract The past few years has witnessed specialized\nlarge language model (LLM) inference systems, such as\nvLLM, SGLang, Mooncake, and DeepFlow, alongside\nrapidLLMadoptionviaserviceslikeChatGPT.Driving\nthese system design efforts is the unique autoregressive\nnatureofLLMrequestprocessing,motivatingnewtech-\nniques for achieving high performance while preserv-\ning high inference quality over high-vol"
+  },
+  {
+    "file": "04_Inference_Engines_Survey_2505.01658.pdf",
+    "title": "A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency",
+    "source": "https://arxiv.org/pdf/2505.01658",
+    "resolved_url": "https://arxiv.org/pdf/2505.01658",
+    "retrieved": "2026-10-07",
+    "bytes": 2458260,
+    "pages": 106,
+    "sha256": "2b0fd0c2502ab78194f8dd3df04833101d8791719db6de6552fed20d86a341c6",
+    "first_page_excerpt": "A Survey on Inference Engines for Large Language Models:\nPerspectives on Optimization and Efficiency\nSIHYEONG PARK,Korea Electronics Technology Institute, South Korea\nSUNGRYEOL JEON,Korea Electronics Technology Institute, South Korea\nCHAELYN LEE,Korea Electronics Technology Institute, South Korea\nSEOKHUN JEON,Korea Electronics Technology Institute, South Korea\nBYUNG-SOO KIM,Korea Electronics Technology Institute, South Korea\nJEMIN LEE∗,Electronics and Telecommunications Research Institute, South"
+  },
+  {
+    "file": "05_Distributed_Training_Survey_2407.20018.pdf",
+    "title": "Efficient Training of Large Language Models on Distributed Infrastructures: A Survey",
+    "source": "https://arxiv.org/pdf/2407.20018",
+    "resolved_url": "https://arxiv.org/pdf/2407.20018",
+    "retrieved": "2026-10-07",
+    "bytes": 1866434,
+    "pages": 42,
+    "sha256": "45db3bb89dffbd09c5c96d253f985a3c0d0ad977276c030213b0f715cff72b83",
+    "first_page_excerpt": "1\nEfficient Training of Large Language Models on\nDistributed Infrastructures: A Survey\nJiangfei Duan∗, Shuo Zhang∗, Zerui Wang∗, Lijuan Jiang, Wenwen Qu, Qinghao Hu, Guoteng Wang,\nQizhen Weng, Hang Y an, Xingcheng Zhang, Xipeng Qiu, Dahua Lin, Y onggang Wen, Xin Jin,\nTianwei Zhang and Peng SunB\nAbstract— Large Language Models (LLMs) like GPT and LLaMA are revolutionizing the AI industry with their sophisticated capabilities.\nTraining these models requires vast GPU clusters and significant comput"
+  }
+]
