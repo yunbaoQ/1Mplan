@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: prepare build directory",
+            "type": "process",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "New-Item -ItemType Directory -Force -Path '${workspaceFolder}/.vscode/build' | Out-Null"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "C++: MSVC build active file",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/nologo",
+                "/Zi",
+                "/Od",
+                "/EHsc",
+                "/std:c++17",
+                "/utf-8",
+                "/W4",
+                "/Fe:${workspaceFolder}/.vscode/build/${fileBasenameNoExtension}.exe",
+                "/Fo:${workspaceFolder}/.vscode/build/${fileBasenameNoExtension}.obj",
+                "/Fd:${workspaceFolder}/.vscode/build/${fileBasenameNoExtension}-compiler.pdb",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/.vscode/build",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/d",
+                        "/c",
+                        "\"D:/Program Files/Microsoft Visual Studio/18/Insiders/Common7/Tools/VsDevCmd.bat\" -no_logo -arch=x64 -host_arch=x64",
+                        "&&"
+                    ]
+                }
+            },
+            "dependsOn": "C++: prepare build directory",
+            "problemMatcher": ["$msCompile"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

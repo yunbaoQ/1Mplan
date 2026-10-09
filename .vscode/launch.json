@@ -10,6 +10,18 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "C++: MSVC 编译并调试当前文件",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/.vscode/build/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "C++: MSVC build active file"
         }
     ]
 }

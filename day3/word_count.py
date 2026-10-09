@@ -27,3 +27,5 @@ with open("day3\\input.txt", "r", encoding="utf-8") as f:
 demo = word_count(text)
 with open("day3\\result.json", "w", encoding="utf-8") as f:
     json.dump(demo, f, ensure_ascii=False, indent=2)
+
+#在读取文件或者写入文件时，.ipynb文件可以直接用该目录下的文件input.txt，而.py文件需要添加当前根目录day3\\input.txt

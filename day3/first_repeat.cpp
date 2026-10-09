@@ -9,7 +9,7 @@ using namespace std;
 pair<int, int> firstRepeat(const vector<int>& ids) {
 	int l = ids.size();
 	unordered_set<int> num_count;
-	int t1, t2 = -1;
+	int t1 = -1, t2 = -1;
 	for (int i = 0; i < l; i++) {
 		if (num_count.count(ids[i])) {
 			t2 = i;
