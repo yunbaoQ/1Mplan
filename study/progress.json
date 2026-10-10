@@ -210,7 +210,8 @@
   "morning_sent_dates": [
     "2026-10-07",
     "2026-10-08",
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-10"
   ],
   "evening_sent_dates": [
     "2026-10-07",
@@ -221,8 +222,8 @@
   "next_day_draft": {
     "date": "2026-10-10",
     "assignment_day": 4,
-    "file": null,
-    "status": "draft_pending_latest_supplement_and_morning_assignment",
+    "file": "../day4/today_2026-10-10.md",
+    "status": "assigned_at_morning",
     "minutes": 360,
     "blocks": [
       {
@@ -249,7 +250,7 @@
     "basis": "User reports remaining corrections done and stops for today; saved C++ initialization correction confirmed; saved Python missing-file handling remains absent. Optional exercise deliberately skipped and never carried into required backlog. Normal file output and Linux operations need no repetition.",
     "available_time_basis": "user actual time and next-day availability unknown; adjust at morning"
   },
-  "notes": "2026-10-09 session closed at user request. Optional deliberately skipped, no penalty/backlog. Remaining corrections self-reported; C++ initialization correction confirmed in source, Python missing-file handler absent in current saved version. Any clarification postponed until next session; tonight no further tasks or reminders.",
+  "notes": "2026-10-10 morning: 360-minute adaptive Day 4 assignment issued. Latest Day 3 corrections already recorded, C++ initialization not reclassified as defective. Missing-file handling/working-directory discrepancy included as brief closure, optional skipped without backlog. No new report; learning cursors unchanged.",
   "active_plan": "accelerated_plan.json",
   "duration_weeks": 6,
   "baseline_day_cursor": 1,
@@ -257,7 +258,7 @@
     "morning": "ai-infra",
     "evening": "ai-infra-22-30"
   },
-  "today_assignment": "../day3/today_2026-10-09.md",
+  "today_assignment": "../day4/today_2026-10-10.md",
   "baseline_profile": "baseline.md",
   "reminder_schedule": {
     "timezone": "Asia/Shanghai",
@@ -288,7 +289,7 @@
       "python_configuration_preserved": true
     }
   },
-  "assignment_day_cursor": 3,
+  "assignment_day_cursor": 4,
   "daily_report_status": {
     "2026-10-07": {
       "type": "manual_summary",
@@ -367,6 +368,14 @@
       "adjustment": "Directory/background process/PID/log/stop exercise; 45-minute cap; no installations",
       "guide": "../day3/C2_linux_guide.md",
       "learning_completion": false
+    },
+    {
+      "date": "2026-10-10",
+      "task": "Day 4 C-3",
+      "request": "c-3具体怎么操作？",
+      "adjustment": "30-minute reshape/matmul/elementwise tutorial; learner predicts, runs and records outputs",
+      "guide": "../day4/C3_guide.md",
+      "learning_completion": false
     }
   ],
   "today_algorithm": {
@@ -381,10 +390,10 @@
     "sample_output": "{0,2}"
   },
   "current_assignment_budget": {
-    "date": "2026-10-09",
-    "minutes": 335,
-    "original_minutes": 390,
-    "git_minutes": 20,
-    "reason": "Reuse initialized repo and existing commits; GUI accepted; brief concept check instead of repeated operations"
+    "date": "2026-10-10",
+    "minutes": 360,
+    "git_minutes": 5,
+    "reason": "Latest Day 3 corrections honored; reuse passed Linux and word count, concise closure then Python organization and tensor practice",
+    "available_time_reported": false
   }
 }

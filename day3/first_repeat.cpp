@@ -31,7 +31,7 @@ pair<int, int> firstRepeat(const vector<int>& ids) {
 
 };
 int main() {
-	vector<int> ids = { 8,3,8,3 };
+	vector<int> ids = { -2,0,-2 };
 	auto k = firstRepeat(ids);
 	cout << "{" << k.first << "," << k.second << "}" << endl;
 	return(0);
