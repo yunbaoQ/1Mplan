@@ -195,6 +195,105 @@
       },
       "study_session_status": "closed_for_today_at_user_request",
       "self_report_remaining_corrections_done": true
+    },
+    "4": {
+      "completed": [
+        "first_repeat_six_user_boundaries_verified",
+        "script_relative_paths",
+        "main_guard_and_side_effect_free_import_verified",
+        "word_count_six_checks_and_saved_json_verified",
+        "cpu_numpy_cuda_control_observations_verified",
+        "gpu_vram_inventory",
+        "tensor_index_elementwise_reshape_matmul",
+        "affine_cpu_gpu_saved_allclose_verified"
+      ],
+      "pending": [
+        "stage_vs_stash_concept",
+        "friendly_file_not_found_handling",
+        "first_unique_single_index_contract",
+        "explicit_dtype_conversion_and_dim_sum",
+        "user_test_and_complexity_notes"
+      ],
+      "unknown": [
+        "actual_minutes",
+        "next_day_available_minutes",
+        "extra_completed"
+      ],
+      "full_daily_report": true,
+      "closing_report_received": true,
+      "self_report_all_tasks_done": true,
+      "all_tasks_verified": false,
+      "actual_minutes": null,
+      "next_day_available_minutes": null,
+      "report_text": "ok今日任务已完成，请查收",
+      "review_file": "../day4/review_2026-10-10.md",
+      "task_status": {
+        "A": "original C++ boundary transcript and clean device control passed; GPU capacity recorded; stage/stash and friendly missing-file feedback pending",
+        "B": "script-relative pathlib/main/import, six counter cases and saved normal JSON passed; missing-file exception still escapes; some user tests/complexity notes pending",
+        "C": "saved tensor operations, reshape/matmul/affine and CPU-GPU allclose passed; explicit dtype conversion and dim sum not evidenced",
+        "algorithm": "counts and outputs all unique indices; original earliest single-index contract pending; current MSVC syntax check passed"
+      },
+      "validation": {
+        "python_coach_checks": 6,
+        "python_import_no_file_io": true,
+        "normal_json_matches_independent_count": true,
+        "missing_file_test": "simulated missing open; FileNotFoundError escapes main; no actual output overwritten",
+        "cpp_original_boundaries": "six expected/actual user transcript cases match task",
+        "cpp_new": "MSVC /Zs syntax check exit0; no executable generated/no new runtime; multiple unique output differs from original single integer contract",
+        "gpu_evidence": "saved notebook outputs only; no GPU rerun; allclose True does not prove speed",
+        "gpu_memory_bytes": 12878086144,
+        "no_user_code_modified": true
+      },
+      "extra_scope_observed": "all unique indices collected instead of earliest only; do not count as original contract passed"
+    },
+    "5": {
+      "completed": [
+        "first_unique_single_index_algorithm_self_reported_and_static_logic_reviewed"
+      ],
+      "deferred": [
+        "targeted_python_git_tensor_closure",
+        "autograd",
+        "tiny_cpu_training"
+      ],
+      "pending": [
+        "learner_algorithm_boundary_and_complexity_notes"
+      ],
+      "unknown": [
+        "actual_minutes",
+        "next_day_available_minutes",
+        "extra_completed"
+      ],
+      "full_daily_report": true,
+      "closing_report_received": true,
+      "self_report_all_tasks_done": false,
+      "all_tasks_verified": false,
+      "actual_minutes": null,
+      "next_day_available_minutes": null,
+      "report_text": "我的算法题已经完成了，然后其他项目推迟到明天，记住周一到周六用来做一些新东西，然后周天周天主要用来复盘。算法题每天都做。今天就先这样，周一开始。然后你先综合一下我这几天做的成果，分析一下我的能力，然后再重新分布一下总体任务，以后每周周末都做一个总结，方便后续学习是继续加强强度，还是可以继续保持强度，来使得能够在对应时间里完成学习。",
+      "reports": [
+        {
+          "id": "2026-10-11:67f80ab2e8fc41acc7e69b33eb772f2e6127fef9c030ce0f65c4d1b00401508e",
+          "text": "我的算法题已经完成了，然后其他项目推迟到明天，记住周一到周六用来做一些新东西，然后周天周天主要用来复盘。算法题每天都做。今天就先这样，周一开始。然后你先综合一下我这几天做的成果，分析一下我的能力，然后再重新分布一下总体任务，以后每周周末都做一个总结，方便后续学习是继续加强强度，还是可以继续保持强度，来使得能够在对应时间里完成学习。",
+          "type": "algorithm_done_defer_other_tasks_stop_today_and_replan"
+        }
+      ],
+      "study_session_status": "closed_for_today_at_user_request",
+      "task_status": {
+        "A": "deferred_to_2026-10-12_by_user",
+        "B": "deferred_to_2026-10-12_by_user",
+        "C": "deferred_to_2026-10-12_after_autograd_gate",
+        "algorithm": "completed self-report; single earliest index logic correct by static inspection; runtime and learner test notes unknown"
+      },
+      "validation": {
+        "file": "../day5/al.cpp",
+        "type": "static_review_only",
+        "logic": "count frequencies, scan input in order, return first count==1 index or -1; average O(n) time and O(n) space",
+        "runtime_attempt": "Temporary isolated harness; compiler chain launch returned Network access is denied; no runtime result obtained",
+        "runtime_verified": false,
+        "learner_boundary_tests_observed": false,
+        "user_code_modified": false
+      },
+      "review_file": "reviews/weekly_2026-10-11.md"
     }
   },
   "blockers": [],
@@ -205,52 +304,59 @@
   "reported_dates": [
     "2026-10-07",
     "2026-10-08",
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
   ],
   "morning_sent_dates": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-09",
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12"
   ],
   "evening_sent_dates": [
     "2026-10-07",
     "2026-10-08",
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
   ],
-  "last_processed_report": "2026-10-09:c7735117660c1b8f391729c85a2556fa7880cb09ba3099e80d0b158a86b90db5",
+  "last_processed_report": "2026-10-11:67f80ab2e8fc41acc7e69b33eb772f2e6127fef9c030ce0f65c4d1b00401508e",
   "next_day_draft": {
-    "date": "2026-10-10",
-    "assignment_day": 4,
-    "file": "../day4/today_2026-10-10.md",
-    "status": "assigned_at_morning",
+    "date": "2026-10-12",
+    "assignment_day": 6,
+    "file": "../day6/today_2026-10-12.md",
+    "status": "assigned_at_delayed_scheduled_run",
     "minutes": 360,
     "blocks": [
       {
-        "topic": "Briefly confirm corrected C++ boundaries; clarify missing-file handling and working-directory concept; relevant Git/device checks only",
+        "topic": "Targeted Python/Git/tensor closure",
         "minutes": 60
       },
       {
-        "topic": "Python paths, functions, main entry and repeatable tests; reuse current word counter",
-        "minutes": 90
-      },
-      {
-        "topic": "PyTorch shape/dtype/device and simple tensor operations; start only after relevant device blockers resolved",
+        "topic": "Autograd scalar, scalar loss and gradient accumulation",
         "minutes": 150
       },
       {
-        "topic": "C++ algorithm boundary explanation and one small extension if passed",
+        "topic": "Tiny CPU training conditional on autograd understanding",
+        "minutes": 90
+      },
+      {
+        "topic": "Daily algorithm: sorted array in-place deduplication",
         "minutes": 40
       },
       {
-        "topic": "Self-check and report",
+        "topic": "Self-check and actual progress report",
         "minutes": 20
       }
     ],
-    "basis": "User reports remaining corrections done and stops for today; saved C++ initialization correction confirmed; saved Python missing-file handling remains absent. Optional exercise deliberately skipped and never carried into required backlog. Normal file output and Linux operations need no repetition.",
-    "available_time_basis": "user actual time and next-day availability unknown; adjust at morning"
+    "basis": "User deferred Day5 non-algorithm work to Monday; passed work reused; autograd gate replaces training block if blocked",
+    "available_time_basis": "Actual learning time and Monday availability unknown; maintain 6h budget rather than add work",
+    "issued_at_local": "2026-10-12T14:00:03.421742+08:00"
   },
-  "notes": "2026-10-10 morning: 360-minute adaptive Day 4 assignment issued. Latest Day 3 corrections already recorded, C++ initialization not reclassified as defective. Missing-file handling/working-directory discrepancy included as brief closure, optional skipped without backlog. No new report; learning cursors unchanged.",
+  "notes": "2026-10-12 scheduled morning run actually executed around 14:00 Beijing, not 08:00. Existing Day6 assignment issued once, delay disclosed. No new human progress since Sunday; training unverified. Six-hour budget is a ceiling to adjust to remaining available time, not actual time; if insufficient defer conditional training. Legacy learning cursors and reported_dates unchanged.",
   "active_plan": "accelerated_plan.json",
   "duration_weeks": 6,
   "baseline_day_cursor": 1,
@@ -258,7 +364,7 @@
     "morning": "ai-infra",
     "evening": "ai-infra-22-30"
   },
-  "today_assignment": "../day4/today_2026-10-10.md",
+  "today_assignment": "../day6/today_2026-10-12.md",
   "baseline_profile": "baseline.md",
   "reminder_schedule": {
     "timezone": "Asia/Shanghai",
@@ -268,10 +374,10 @@
   },
   "hardware": {
     "gpu_name": "NVIDIA GeForce RTX 4070",
-    "gpu_memory_bytes": null,
+    "gpu_memory_bytes": 12878086144,
     "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
     "ram_bytes": 34028830720,
-    "evidence": "day2/hardware_inventory.txt; GPU VRAM remains unknown"
+    "evidence": "CPU/RAM: day2/hardware_inventory.txt; GPU total memory: day4/tensor_practice.ipynb saved device properties"
   },
   "environment": {
     "python_environment": "torch311",
@@ -289,7 +395,7 @@
       "python_configuration_preserved": true
     }
   },
-  "assignment_day_cursor": 4,
+  "assignment_day_cursor": 6,
   "daily_report_status": {
     "2026-10-07": {
       "type": "manual_summary",
@@ -329,6 +435,39 @@
       ],
       "session_closed": true,
       "optional_status": "skipped_by_user_choice_not_backlog"
+    },
+    "2026-10-10": {
+      "type": "manual_review_summary",
+      "closing_report_received": true,
+      "all_task_statuses_reported": true,
+      "self_report_all_tasks_done": true,
+      "all_tasks_completed": false,
+      "all_tasks_verified": false,
+      "hours_reported": false,
+      "evening_recap_needed": false,
+      "summary_file": "../day4/review_2026-10-10.md",
+      "missing_information": [
+        "actual_minutes",
+        "next-day availability",
+        "extra content"
+      ]
+    },
+    "2026-10-11": {
+      "type": "manual_weekly_summary_and_stop_for_today",
+      "closing_report_received": true,
+      "all_task_statuses_reported": true,
+      "all_tasks_completed": false,
+      "all_tasks_verified": false,
+      "hours_reported": false,
+      "evening_recap_needed": false,
+      "session_closed": true,
+      "summary_file": "reviews/weekly_2026-10-11.md",
+      "missing_information": [
+        "actual_minutes",
+        "next-day available time",
+        "learner boundary tests/complexity notes",
+        "extra content"
+      ]
     }
   },
   "learning_support_requests": [
@@ -376,24 +515,160 @@
       "adjustment": "30-minute reshape/matmul/elementwise tutorial; learner predicts, runs and records outputs",
       "guide": "../day4/C3_guide.md",
       "learning_completion": false
+    },
+    {
+      "date": "2026-10-10",
+      "task": "Day 4 A-3",
+      "request": "A-3具体怎么操作？",
+      "adjustment": "20-minute CPU/NumPy sharing, CUDA copy, variable rebinding and GPU capacity tutorial; clean sequential notebook execution",
+      "guide": "../day4/A3_guide.md",
+      "learning_completion": false
+    },
+    {
+      "date": "2026-10-10",
+      "task": "Day 4 B",
+      "request": "B是需要我做什么？我确实有点搞不懂，我看网页也看不太懂，你给我详细简单一点叙述",
+      "adjustment": "Explain using existing word_count_try.py; script-relative paths 35 minutes, main/import behavior 35 minutes, learner verification 20 minutes; reference pages optional lookup",
+      "guide": "../day4/B_guide.md",
+      "learning_completion": false
+    },
+    {
+      "date": "2026-10-10",
+      "task": "Day 4 C-4",
+      "request": "c-4怎么做？",
+      "adjustment": "45-minute X/W/b construction, matrix product plus broadcast bias, learner hand-check and bias change, CPU/GPU allclose and notes",
+      "guide": "../day4/C4_guide.md",
+      "learning_completion": false
+    },
+    {
+      "date": "2026-10-12",
+      "task": "Day6 A-1/A-3/A-4",
+      "request": "A-1到底是干嘛，为什么总要我去试这种错误，意义在哪？a-3给我个完成流程。a-4测试测试什么东西？",
+      "adjustment": "Explain existing missing-file observation is already evidenced; add one targeted handling check, share it with A4. A3 CPU sum/dtype/broadcast workflow and A4 exact counter inputs/expected outputs; reuse learner prior equivalent records. Keep A60 minutes.",
+      "guide": "../day6/A_guide.md",
+      "learning_completion": false
+    },
+    {
+      "date": "2026-10-12",
+      "task": "Day6 A-1 try/except",
+      "request": "a-1我已经在day4中做过了，要不然你就给我安排使用try/expect来进行，然后给我一个具体的做法",
+      "adjustment": "Reuse Day4 missing-file observation. Explicit try/except 15-minute lesson with narrow read catch, informative path, return from main; learner integrates existing word_count and tests normal/missing once, sharing A4 evidence. Teaching snippet saved in A_guide, not user exercise code.",
+      "guide": "../day6/A_guide.md",
+      "learning_completion": false
     }
   ],
   "today_algorithm": {
-    "date": "2026-10-09",
-    "title": "第一个重复任务编号",
+    "date": "2026-10-11",
+    "title": "第一个只出现一次的任务编号",
     "source": "coach_original_beginner_problem",
-    "problem_file": "../day3/algorithm_first_repeat.md",
-    "expected_deliverable": "../day3/first_repeat.cpp",
+    "file": "../day5/al.cpp",
     "minutes": 40,
-    "status": "Uninitialized return defect corrected in saved source; boundary test documentation pending",
+    "actual_minutes": null,
+    "status": "self_report_complete_static_logic_passed_runtime_unverified",
     "platform_rating": null,
-    "sample_output": "{0,2}"
+    "review_file": "reviews/weekly_2026-10-11.md"
   },
   "current_assignment_budget": {
-    "date": "2026-10-10",
+    "date": "2026-10-12",
     "minutes": 360,
-    "git_minutes": 5,
-    "reason": "Latest Day 3 corrections honored; reuse passed Linux and word count, concise closure then Python organization and tensor practice",
-    "available_time_reported": false
-  }
+    "available_time_reported": false,
+    "git_minutes": 10,
+    "reason": "Latest Sunday review; user moved non-algorithm Day5 work to Monday; delayed daily run. A60/B150/C90 conditional, algorithm40/selfcheck20. If available time insufficient prioritize A/B/algorithm and defer C rather than study late."
+  },
+  "weekly_summary_sent_dates": [
+    "2026-10-11"
+  ],
+  "active_plan_revision": "2026-10-11_sunday_review_evidence_based",
+  "latest_weekly_summary": "reviews/weekly_2026-10-11.md",
+  "weekly_rhythm": {
+    "new_learning_weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "review_weekday": 7,
+    "algorithm_every_day": true,
+    "weekly_summary": "Sunday evening, combined with existing reminder; manual summary suppresses duplicate"
+  },
+  "intensity_decision": {
+    "date": "2026-10-11",
+    "decision": "maintain",
+    "mon_sat_target_minutes": 360,
+    "sunday_target_minutes": 150,
+    "reason": "Evidence of progress but support still needed; actual time/closed-book mastery unknown; simplify and prioritize before increasing",
+    "next_review_date": "2026-10-18",
+    "weekly_template": "reviews/weekly_template.md"
+  },
+  "remaining_known_gaps": [
+    "friendly missing-file handling with no result write after failed read",
+    "stage vs stash learner explanation",
+    "explicit dtype conversion and dimension-wise sum/broadcast shape",
+    "learner test and complexity explanations",
+    "autograd and parameter update",
+    "tiny training/restoration",
+    "inference service, controlled benchmark and optimization",
+    "GPU timing/profile and core systems/interview understanding"
+  ],
+  "resolved_recent_gaps": [
+    {
+      "gap": "first_unique_single_index_contract",
+      "date": "2026-10-11",
+      "evidence": "../day5/al.cpp",
+      "validation": "static logic correct; runtime not verified"
+    }
+  ],
+  "mastery_gates": [
+    {
+      "id": "foundation",
+      "target_date": "2026-10-17",
+      "gate": "能解释求导和更新；小训练/恢复正确；Attention shape清楚；计时口径合理",
+      "status": "pending"
+    },
+    {
+      "id": "service",
+      "target_date": "2026-10-24",
+      "gate": "小模型离线和本地服务可复现；流式/上下文/显存与指标定义有记录",
+      "status": "pending"
+    },
+    {
+      "id": "benchmark",
+      "target_date": "2026-10-31",
+      "gate": "原始请求数据、分位数、吞吐和失败；一项受控优化有结论",
+      "status": "pending"
+    },
+    {
+      "id": "reliability_source",
+      "target_date": "2026-11-07",
+      "gate": "环境入口/监控/故障恢复/源码链；专项概念能解释，未实测明确",
+      "status": "pending"
+    },
+    {
+      "id": "portfolio_interview",
+      "target_date": "2026-11-14",
+      "gate": "README/报告/真实简历草稿；模拟面试与核心基础答题",
+      "status": "pending"
+    },
+    {
+      "id": "closure",
+      "target_date": "2026-11-17",
+      "gate": "完成证据、剩余缺口与后续建议；算法持续练习",
+      "status": "pending"
+    }
+  ],
+  "plan_change_history": [
+    {
+      "date": "2026-10-11",
+      "report_id": "2026-10-11:67f80ab2e8fc41acc7e69b33eb772f2e6127fef9c030ce0f65c4d1b00401508e",
+      "change": "Calendar Sundays review, algorithm daily, Mon-Sat new learning; phased inference core with specialist optional scope",
+      "legacy_cursors_unchanged": {
+        "planned_day_cursor": 1,
+        "baseline_day_cursor": 1
+      },
+      "deadline_unchanged": "2026-11-17",
+      "backup": "archive/before_2026-10-11"
+    }
+  ]
 }

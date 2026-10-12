@@ -1,8 +1,13 @@
 ##我先将text全部小写，随后将所有小写字母列出来放入set中，让每一个字符全部判定一遍是否是小写字母，如果不是，将其改为空格。
 ##这样就能够保证不管是什么情况的字符都会被消除。
 import json
+from pathlib import Path
 
-
+base_dir = Path(__file__).resolve().parent
+input_path = base_dir / 'input1.txt'
+output_path = base_dir / 'result.json'
+#print('当前工作目录:', Path.cwd())
+#print('实际输入路径:', input_path)
 def word_count(text):
     set1 = set()
     for tik in 'abcdefghijklmnopqrstuvwxyz':
@@ -19,13 +24,18 @@ def word_count(text):
         else:
             counts[word] = 1    
     return counts
-with open("day4\\input1.txt", "r", encoding="utf-8") as f:
-    text = f.read()
-#counts_sort = {}
-#counts_sort = sorted(word_count(text).values(), reverse=True)
-#print(word_count(text))
-demo = word_count(text)
-with open("day4\\result.json", "w", encoding="utf-8") as f:
-    json.dump(demo, f, ensure_ascii=False, indent=2)
+
+def main():
+    with open(input_path, "r", encoding="utf-8") as f:
+        text = f.read()
+    #counts_sort = {}
+    #counts_sort = sorted(word_count(text).values(), reverse=True)
+    #print(word_count(text))
+    demo = word_count(text)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(demo, f, ensure_ascii=False, indent=2)
+
+if __name__ == '__main__':
+    main()
 
 #在读取文件或者写入文件时，.ipynb文件可以直接用该目录下的文件input.txt，而.py文件需要添加当前根目录day3\\input.txt
