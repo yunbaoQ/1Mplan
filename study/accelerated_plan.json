@@ -1576,7 +1576,7 @@
       "review_day": false,
       "minimum_minutes": 360,
       "target_minutes": 360,
-      "optional_minutes": 60,
+      "optional_minutes": 0,
       "maximum_required_minutes": 420,
       "algorithm_minutes": 40,
       "selfcheck_minutes": 20,
@@ -1585,39 +1585,42 @@
         "算法每日40分钟，包括周日；允许复习一题，但必须有当日练习与边界说明。",
         "自测/进度20分钟；写实际耗时或明确未知。"
       ],
-      "title": "Attention 的最小实现",
+      "title": "短补Day7与普通Attention小实验",
       "baseline_days": [
         18,
         64
       ],
       "blocks": [
         {
-          "title": "新概念与预测",
-          "minutes": 90,
-          "learn": "追踪Q/K/V、缩放、softmax和mask的shape；FlashAttention仅先建立问题背景",
-          "practice": "只读对应小节；用自己的话写输入/输出/预期",
-          "deliverable": "概念/shape/假设短记录",
-          "resource": "pytorch"
-        },
-        {
-          "title": "一个可运行实践",
-          "minutes": 150,
-          "learn": "将概念连接现有项目",
-          "practice": "用小张量实现普通Attention，手算一行；改变mask比较输出",
-          "deliverable": "输出shape正确、权重每行和约1；解释mask目的；不要求优化kernel",
-          "resource": "pytorch"
-        },
-        {
-          "title": "边界检查、排障与解释",
+          "title": "Day7具体缺口收尾",
           "minutes": 60,
-          "learn": "识别限制与无效对照",
-          "practice": "测试两项相关边界；保存报错或实际结果，解释一项异常",
-          "deliverable": "验证记录和剩余卡点",
+          "learn": "样本/特征与state_dict键名；受控学习率比较",
+          "practice": "同初值两次单步、5x4组批、短说明、日志口径",
+          "deliverable": "closure_notes及本人输出",
+          "resource": "pytorch"
+        },
+        {
+          "title": "加权和与二维Attention",
+          "minutes": 150,
+          "learn": "Q/K/V、分数、行softmax、输出shape",
+          "practice": "三行二维数据；手算一行再实现；零查询对照",
+          "deliverable": "attention_practice和本人解释",
+          "resource": "pytorch"
+        },
+        {
+          "title": "因果mask与受控改变V",
+          "minutes": 90,
+          "learn": "当前位置只读自己及之前位置",
+          "practice": "屏蔽未来；改变最后一行V验证前两行不变",
+          "deliverable": "mask输出与解释；依赖未过替换为补缺",
           "resource": "pytorch"
         }
       ],
       "prerequisite_rule": "先通过依赖项再进入下一主块；未过则替换后续块，不叠加多日欠账。",
-      "optional_baseline_days": []
+      "optional_baseline_days": [],
+      "effective_assignment_file": "../day8/today_2026-10-14.md",
+      "adjustment_basis": "../day7/review_2026-10-13.md",
+      "scope_note": "仅普通Attention；FlashAttention背景及完整专项推迟，不计今日未完成项。"
     },
     {
       "day": 9,
@@ -1627,7 +1630,7 @@
       "review_day": false,
       "minimum_minutes": 360,
       "target_minutes": 360,
-      "optional_minutes": 60,
+      "optional_minutes": 0,
       "maximum_required_minutes": 420,
       "algorithm_minutes": 40,
       "selfcheck_minutes": 20,
@@ -1636,39 +1639,39 @@
         "算法每日40分钟，包括周日；允许复习一题，但必须有当日练习与边界说明。",
         "自测/进度20分钟；写实际耗时或明确未知。"
       ],
-      "title": "Transformer 前向与生成阶段",
+      "title": "Attention用途巩固与条件式前向入门",
       "baseline_days": [
         19,
         20
       ],
       "blocks": [
         {
-          "title": "新概念与预测",
+          "title": "回顾答疑与用途映射",
           "minutes": 90,
-          "learn": "沿小模型结构追踪embedding/attention/MLP/logits；区分prefill与decode",
-          "practice": "只读对应小节；用自己的话写输入/输出/预期",
-          "deliverable": "概念/shape/假设短记录",
-          "resource": "pytorch"
+          "practice": "资料卡类比、行列含义、因果限制及日志短收尾",
+          "deliverable": "review_answers.md",
+          "guide": "../day9/A_review_guide.md"
         },
         {
-          "title": "一个可运行实践",
-          "minutes": 150,
-          "learn": "将概念连接现有项目",
-          "practice": "以短token序列记录前向shape；解释逐token生成与缓存接口",
-          "deliverable": "自己的前向说明、两阶段对照与一份可运行的短输入记录",
-          "resource": "pytorch"
+          "title": "两个查询三份参考受控实验",
+          "minutes": 120,
+          "practice": "改变查询数、分别改K/V、预测与打印解释",
+          "deliverable": "attention_semantics.ipynb及notes",
+          "guide": "../day9/B_attention_guide.md"
         },
         {
-          "title": "边界检查、排障与解释",
-          "minutes": 60,
-          "learn": "识别限制与无效对照",
-          "practice": "测试两项相关边界；保存报错或实际结果，解释一项异常",
-          "deliverable": "验证记录和剩余卡点",
-          "resource": "pytorch"
+          "title": "条件式token/embedding/logits入门",
+          "minutes": 90,
+          "practice": "玩具查表线性分数及生成阶段概念；依赖未过替换为B补缺",
+          "deliverable": "forward_demo.ipynb及notes",
+          "guide": "../day9/C_forward_guide.md"
         }
       ],
       "prerequisite_rule": "先通过依赖项再进入下一主块；未过则替换后续块，不叠加多日欠账。",
-      "optional_baseline_days": []
+      "optional_baseline_days": [],
+      "effective_assignment_file": "../day9/today_2026-10-15.md",
+      "adjustment_basis": "../day9/review_2026-10-14.md",
+      "scope_note": "完整Transformer/缓存接口运行暂缓，toy查表+线性层不算完整模型前向。阅读答疑与面试知识含在原预算内。"
     },
     {
       "day": 10,
@@ -3347,5 +3350,32 @@
       "prerequisite_rule": "先通过依赖项再进入下一主块；未过则替换后续块，不叠加多日欠账。",
       "optional_baseline_days": []
     }
-  ]
+  ],
+  "daily_material_policy": {
+    "effective_date": "2026-10-14",
+    "review_location": "next calendar assignment day folder",
+    "required_files": [
+      "README.md",
+      "review_YYYY-MM-DD.md",
+      "questions_answers.md",
+      "today_YYYY-MM-DD.md",
+      "guides for main blocks and algorithm",
+      "knowledge_interview.md"
+    ],
+    "question_sources": [
+      "current user report",
+      "learner notes in active day folder"
+    ],
+    "teaching_order": [
+      "purpose",
+      "bounded analogy",
+      "map to code or shapes",
+      "prediction",
+      "learner experiment",
+      "explanation"
+    ],
+    "source_policy": "official or primary links with exact sections, short Chinese explanations; interview practice not unsupported company/frequency claims",
+    "budget": "reading and Q&A included in existing daily budget",
+    "notification_schedule_unchanged": true
+  }
 }

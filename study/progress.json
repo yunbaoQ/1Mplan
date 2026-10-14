@@ -386,6 +386,141 @@
         "clean_50_step_reproduction_verified": false,
         "step_log_note": "saved step10 matches independent 20-update recurrence; final matches 60, possible previous updates, actual total not assumed"
       }
+    },
+    "7": {
+      "completed": [
+        "SGD_single_step_formula_and_saved_output",
+        "backward_vs_step_and_zero_grad_explanation",
+        "batch_size_and_drop_last_saved_outputs",
+        "clean_50_step_training_saved_outputs_and_independent_math_check",
+        "save_restore_prediction_consistency_saved_outputs",
+        "algorithm_O1_extra_space_static_verified"
+      ],
+      "pending": [
+        "algorithm_empty_input_returns_1_not_0",
+        "learner_five_algorithm_boundary_run_records",
+        "DataLoader_samples_vs_features_note_correction",
+        "controlled_same_initial_state_lr_comparison",
+        "state_dict_key_name_learner_explanation"
+      ],
+      "unknown": [
+        "actual_minutes",
+        "next_day_available_minutes",
+        "independent_closed_book_mastery"
+      ],
+      "actual_minutes": null,
+      "next_day_available_minutes": null,
+      "self_report_all_tasks_done": true,
+      "all_tasks_verified": false,
+      "full_daily_report": false,
+      "closing_report_received": true,
+      "report_text": "今天的任务完成了，验收一下。",
+      "reports": [
+        {
+          "id": "2026-10-13:af4d8ae129337f795cef9de7385b8418c87a4777fe4b5f0319be4cf9ad9108c6",
+          "text": "今天的任务完成了，验收一下。",
+          "type": "completion_self_report_and_review_request"
+        }
+      ],
+      "review_file": "../day7/review_2026-10-13.md",
+      "study_session_status": "reviewed_pending_targeted_corrections_no_repeat_evening_reminder",
+      "task_status": {
+        "A": "core update/clear mechanics passed; controlled same-start lr comparison pending",
+        "B": "saved batching outputs passed; sample-vs-feature explanation incorrect",
+        "C": "saved restoration practice passed; key-name understanding pending",
+        "algorithm": "O(n) time/O(1) space and nonempty logic passed statically; empty input incorrect; runtime unverified"
+      },
+      "validation": {
+        "notebooks": "source and saved outputs reviewed, not rerun",
+        "training_math": "independent 50-step recurrence matched saved final w/b within 1e-6",
+        "restore_allclose_saved": true,
+        "restore_max_abs_diff_saved": 0.0,
+        "checkpoint_reloaded_by_coach": false,
+        "cpp": "static control-flow review only; empty returns1; no compile/runtime this review",
+        "user_exercises_modified": false
+      },
+      "extra_completed": [
+        {
+          "item": "DataLoader connected to tiny training loop",
+          "evidence": "../day7/tiny_train.ipynb",
+          "validation": "source and saved outputs; 50 epochs x3 batches =150 optimizer steps",
+          "remaining": "epoch*batch_index is not cumulative step; loss is current batch only"
+        }
+      ],
+      "questions": [
+        "state_dict key names explicitly unclear in learner notes; coach explained weight/bias mapping and load distinction",
+        "DataLoader misconception corrected with 5x4 example; learner restatement pending"
+      ]
+    },
+    "8": {
+      "completed": [
+        "controlled_lr_comparison_saved_transcripts_and_math_verified",
+        "sample_vs_feature_understanding_corrected",
+        "state_dict_load_distinction_explained",
+        "attention_numeric_chain_saved_outputs_verified",
+        "zero_query_uniform_weights_explanation_correct",
+        "causal_mask_practice_and_changed_V_control_saved_verified",
+        "algorithm_empty_input_fix_in_notes_static_passed"
+      ],
+      "pending": [
+        "attention_purpose_query_reference_semantics",
+        "artificial_weight_example_vs_QK_computed_weights",
+        "causal_information_leakage_and_allowed_index_explanation",
+        "algorithm_corrected_source_sync_and_runtime_records",
+        "global_step_vs_batch_loss_log_label_correction"
+      ],
+      "unknown": [
+        "actual_minutes",
+        "next_day_available_minutes",
+        "independent_closed_book_mastery",
+        "clean_notebook_rerun"
+      ],
+      "actual_minutes": null,
+      "next_day_available_minutes": null,
+      "all_tasks_verified": false,
+      "full_daily_report": false,
+      "closing_report_received": true,
+      "review_file": "../day9/review_2026-10-14.md",
+      "task_status": {
+        "A": "lr comparison, sample/features, state loading passed by saved evidence and explanation; old training log label correction remains",
+        "B": "numerical practice passed; purpose and query/reference semantics need reinforcement",
+        "C": "saved practical control and negative infinity explanation passed; causal rationale and allowed indices pending",
+        "algorithm": "correct empty check submitted in day8 notes; original cpp still old; no compiled boundary results"
+      },
+      "C_validation": {
+        "source": "../day8/attention_practice.ipynb saved outputs and attention_notes.md C section",
+        "independent_math_check": "matched selected saved numeric outputs to1e-4",
+        "coach_notebook_rerun": false,
+        "saved_mask_execution_count": null,
+        "theory_passed": false,
+        "user_code_modified": false
+      },
+      "reports": [
+        {
+          "id": "2026-10-14:3eb1294eeae54a75dc49549c3b0e49734144e8e2bdbe5ec10103dfb4818cc7be",
+          "text": "a是要干什么？然后帮我看一下c的回答是不是正确的。然后算法题我没看懂你要我干嘛？是要优化吗？我的day7的有什么问题吗？",
+          "type": "partial_C_submission_review_request_and_A_algorithm_clarification"
+        },
+        {
+          "id": "2026-10-14:b8f3a11f1cc5d38874a281aad3150eecdee9c3a0bf2f1c810b54fc8a35ea3412",
+          "text": "今天任务完成了，查收一下。我还有很多东西不太懂，你可以将今天的回顾总结成一个文档放在明天的文件中的，以后都这样，并且我的notes中可能有疑惑，最好有一个疑惑解答的文件，也放在明天的文件里。然后每天安排任务时，最好将guide文件也给一下，否则我会有点不太懂，然后有一些需要知道的东西，比如说面试当中常见的问题或者，需要经常理解和使用的方面的知识，最好给一下解释，并且将相关文件网页给一下。",
+          "type": "closing_completion_report_and_daily_document_workflow_request"
+        }
+      ],
+      "self_report_all_tasks_done": true,
+      "report_text": "今天任务完成了，查收一下。我还有很多东西不太懂，你可以将今天的回顾总结成一个文档放在明天的文件中的，以后都这样，并且我的notes中可能有疑惑，最好有一个疑惑解答的文件，也放在明天的文件里。然后每天安排任务时，最好将guide文件也给一下，否则我会有点不太懂，然后有一些需要知道的东西，比如说面试当中常见的问题或者，需要经常理解和使用的方面的知识，最好给一下解释，并且将相关文件网页给一下。",
+      "questions_answers_file": "../day9/questions_answers.md",
+      "study_session_status": "manual_closing_review_covers_evening",
+      "validation": {
+        "notebooks_rerun": false,
+        "user_code_modified": false,
+        "independent_math": "pure Python SGD losses5.93/3.52; attention first row and masked output matched at1e-4; fixed QK changed V prefix invariance checked",
+        "algorithm": "static review of code in day8/algorithm_notes.md; source day7/al.cpp unsynced; no C++ run",
+        "saved_output_caveats": [
+          "batch_practice later cells still show old5x1 data; required5x4 batch_size2 records valid",
+          "attention mask cell execution_countNone; clean run unverified"
+        ]
+      }
     }
   },
   "blockers": [],
@@ -399,7 +534,9 @@
     "2026-10-09",
     "2026-10-10",
     "2026-10-11",
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14"
   ],
   "morning_sent_dates": [
     "2026-10-07",
@@ -408,7 +545,8 @@
     "2026-10-10",
     "2026-10-11",
     "2026-10-12",
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-14"
   ],
   "evening_sent_dates": [
     "2026-10-07",
@@ -416,41 +554,52 @@
     "2026-10-09",
     "2026-10-10",
     "2026-10-11",
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14"
   ],
-  "last_processed_report": "2026-10-12:d63bed3a0244f446674ffd81ae7276dee8263e97fca4c358e69f315bc218e56c",
+  "last_processed_report": "2026-10-14:b8f3a11f1cc5d38874a281aad3150eecdee9c3a0bf2f1c810b54fc8a35ea3412",
   "next_day_draft": {
-    "date": "2026-10-13",
-    "assignment_day": 7,
-    "file": "../day7/today_2026-10-13.md",
-    "status": "assigned_at_morning",
-    "minutes": 360,
+    "date": "2026-10-15",
+    "day": 9,
+    "file": "../day9/today_2026-10-15.md",
+    "entry_file": "../day9/README.md",
+    "status": "prepared_not_sent",
+    "total_required_minutes": 360,
     "blocks": [
       {
-        "topic": "One SGD update, zero_grad observation and controlled learning-rate comparison",
+        "topic": "Evidence review and question explanations",
+        "minutes": 90
+      },
+      {
+        "topic": "Two-query attention semantics with controlled K/V changes",
         "minutes": 120
       },
       {
-        "topic": "Small batches after training understanding",
+        "topic": "Conditional token embedding/logits forward introduction",
         "minutes": 90
       },
       {
-        "topic": "Model state saving/restoration after training understanding",
-        "minutes": 90
-      },
-      {
-        "topic": "Daily algorithm O1 space correction, no extra new problem",
+        "topic": "Daily algorithm source sync and boundary execution",
         "minutes": 40
       },
       {
-        "topic": "Self-check and actual report",
+        "topic": "Closed-book selfcheck and actual time report",
         "minutes": 20
       }
     ],
-    "basis": "Latest Day7 help request: user understands broad code sequence but not optimizer parameter updates; guide revised to concrete experiments without assuming completion.",
-    "issued_at_local": "2026-10-13T08:06:26.162092+08:00"
+    "guides": [
+      "../day9/A_review_guide.md",
+      "../day9/B_attention_guide.md",
+      "../day9/C_forward_guide.md",
+      "../day9/algorithm_guide.md"
+    ],
+    "review_file": "../day9/review_2026-10-14.md",
+    "questions_answers_file": "../day9/questions_answers.md",
+    "knowledge_file": "../day9/knowledge_interview.md",
+    "basis": "User reports many concepts unclear; saved numeric practice passed. Reduce new-topic density within same360 minutes; full Transformer/cache implementation remains unverified and deferred."
   },
-  "notes": "2026-10-13 algorithm task clarified at user request: sorted dedup, return count and valid prefix, fixed extra variables rather than set. Read/write indices and example trace added; original40 minutes retained, no extra problem. No learner algorithm code changed or run, and no completion report inferred from help or other files.",
+  "notes": "Day8 closing review saved in day9 per user request, with Q&A, tomorrow task, ready guides and knowledge/interview sources. New daily material policy persisted. Actual hours unknown; reduce new-topic density rather than increase hours. No user exercise modified or executed. Next morning not pre-recorded.",
   "active_plan": "accelerated_plan.json",
   "duration_weeks": 6,
   "baseline_day_cursor": 1,
@@ -458,7 +607,7 @@
     "morning": "ai-infra",
     "evening": "ai-infra-22-30"
   },
-  "today_assignment": "../day7/today_2026-10-13.md",
+  "today_assignment": "../day8/today_2026-10-14.md",
   "baseline_profile": "baseline.md",
   "reminder_schedule": {
     "timezone": "Asia/Shanghai",
@@ -489,7 +638,7 @@
       "python_configuration_preserved": true
     }
   },
-  "assignment_day_cursor": 7,
+  "assignment_day_cursor": 8,
   "daily_report_status": {
     "2026-10-07": {
       "type": "manual_summary",
@@ -579,6 +728,39 @@
         "next-day availability",
         "extra scope",
         "learner algorithm test records"
+      ]
+    },
+    "2026-10-13": {
+      "type": "manual_review_summary",
+      "closing_report_received": true,
+      "self_report_all_tasks_done": true,
+      "all_tasks_completed": false,
+      "all_tasks_verified": false,
+      "hours_reported": false,
+      "evening_recap_needed": false,
+      "summary_file": "../day7/review_2026-10-13.md",
+      "missing_information": [
+        "actual_minutes",
+        "next-day availability",
+        "learner algorithm boundary records",
+        "closed-book answers"
+      ]
+    },
+    "2026-10-14": {
+      "type": "manual_closing_review_and_workflow_update",
+      "closing_report_received": true,
+      "self_report_all_tasks_done": true,
+      "all_tasks_completed": false,
+      "all_tasks_verified": false,
+      "hours_reported": false,
+      "evening_recap_needed": false,
+      "summary_file": "../day9/review_2026-10-14.md",
+      "questions_answers_file": "../day9/questions_answers.md",
+      "missing_information": [
+        "actual_minutes",
+        "next_day_availability",
+        "closed-book answers",
+        "algorithm runtime records"
       ]
     }
   },
@@ -719,24 +901,53 @@
       "adjustment": "Same sorted dedup problem; copy own Day6 file, remove set, keep/write using i and left. Explicit goal, five-row trace, five test cases, O1 explained as fixed additional variables; 40min retained.",
       "guide": "../day7/algorithm_dedup_guide.md",
       "learning_completion": false
+    },
+    {
+      "id": "2026-10-14:help:54ec9780cf7264b66c4aaab6c0d8be634d9c17e03fc7e4a06cf36d0301674af2",
+      "date": "2026-10-14",
+      "task": "Day8 B ordinary attention hands-on",
+      "request": "B具体步骤是什么？我不太清楚怎么去做这些",
+      "guide": "../day8/B_attention_guide.md",
+      "adjustment": "Concrete notebook cells: weighted sum, QK row comparisons, scaled scores, row softmax, weighted V, zero-query control, learner notes. B150 retained; no learner notebook written or run.",
+      "learning_completion": false
+    },
+    {
+      "id": "2026-10-14:help:07a3e2335460d7ef0b33bcc7b724eda27f4bde652f30c8e654e6646a5b9cb029",
+      "date": "2026-10-14",
+      "task": "Day8 Attention purpose, analogies and causal mask guidance",
+      "request": "说实话我没弄懂B是要干什么？除了学习softmax，其他的有什么东西也需要使用向B的这些东西吗？帮我举点例子，我还是喜欢联想法去记忆一些东西。然后C主要要干什么，你也给我指导一下。",
+      "guide": "../day8/C_mask_guide.md",
+      "related_guide": "../day8/B_attention_guide.md",
+      "adjustment": "Explain information aggregation using lookup/translation/next-token analogies before math; distinguish arbitrary starter blend from attention-computed weights; C allowed table, pre-softmax mask, fixed-QK changed-V control. Retain B150/C90.",
+      "learning_completion": false
+    },
+    {
+      "id": "2026-10-14:help:3eb1294eeae54a75dc49549c3b0e49734144e8e2bdbe5ec10103dfb4818cc7be",
+      "date": "2026-10-14",
+      "task": "Day8 A concrete closure and algorithm goal clarification",
+      "request": "a是要干什么？然后帮我看一下c的回答是不是正确的。然后算法题我没看懂你要我干嘛？是要优化吗？我的day7的有什么问题吗？",
+      "guide": "../day8/A_closure_guide.md",
+      "adjustment": "A four short closure actions, same60 minutes; algorithm only empty input correctness and five cases, no additional optimization or new problem.",
+      "learning_completion": false
     }
   ],
   "today_algorithm": {
-    "date": "2026-10-13",
-    "title": "有序数组原地去重：读写位置与固定额外空间",
-    "source": "coach_beginner_problem_revision",
+    "date": "2026-10-14",
+    "title": "有序数组原地去重：空输入修正与五组边界",
     "file": "../day7/al.cpp",
     "guide": "../day7/algorithm_dedup_guide.md",
+    "record_file": "../day8/algorithm_notes.md",
     "minutes": 40,
     "actual_minutes": null,
-    "status": "assigned_with_plain_language_guide_not_completed",
-    "platform_rating": null
+    "status": "empty_input_fix_in_notes_static_passed_cpp_sync_and_runtime_pending",
+    "platform_rating": null,
+    "review_file": "../day9/review_2026-10-14.md"
   },
   "current_assignment_budget": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "minutes": 360,
     "available_time_reported": false,
-    "reason": "Day7 A revised to hands-on optimizer observation at user request; user self-reports understanding overall sequence, parameter update remains unclear. A120/B90/C90/algorithm40/selfcheck20 unchanged."
+    "reason": "Day7 practices reviewed; targeted closure60, ordinary Attention150, mask90, algorithm40, selfcheck20. Keep intensity and replace downstream block if prerequisites remain unclear."
   },
   "weekly_summary_sent_dates": [
     "2026-10-11"
@@ -768,13 +979,15 @@
   "remaining_known_gaps": [
     "stage vs stash learner explanation",
     "learner test and complexity explanations",
-    "autograd learner hand-gradient/scalar-shape note corrections; parameter updates pending C",
-    "tiny training/restoration",
+    "autograd hand-gradient/scalar-shape/keepdim short note corrections",
+    "Attention purpose/query-reference semantics and artificial vs computed proportions",
+    "causal information leakage and allowed row/column explanation",
+    "algorithm corrected source sync and learner boundary runs",
+    "global step/current-batch loss logging labels",
+    "clean notebook evidence hygiene",
+    "full Transformer forward, prefill/decode and timing fundamentals",
     "inference service, controlled benchmark and optimization",
-    "GPU timing/profile and core systems/interview understanding",
-    "training steps understanding and clean initial-to-step log",
-    "algorithm O1 extra space correction",
-    "short scalar shape, derivative and keepdim explanations"
+    "GPU profiling and core systems/interview understanding"
   ],
   "resolved_recent_gaps": [
     {
@@ -782,6 +995,54 @@
       "date": "2026-10-11",
       "evidence": "../day5/al.cpp",
       "validation": "static logic correct; runtime not verified"
+    },
+    {
+      "gap": "SGD_parameter_update_core_understanding",
+      "date": "2026-10-13",
+      "evidence": "../day7/optimizer_practice.ipynb",
+      "validation": "saved one-step numeric match plus learner explanation; controlled lr comparison remains"
+    },
+    {
+      "gap": "clean_50_step_training",
+      "date": "2026-10-13",
+      "evidence": "../day7/tiny_path_train.ipynb",
+      "validation": "sequential saved outputs plus independent recurrence agreement within1e-6; notebook not rerun"
+    },
+    {
+      "gap": "model_save_restore_practice",
+      "date": "2026-10-13",
+      "evidence": "../day7/tiny_path_train.ipynb",
+      "validation": "saved new-model load allcloseTrue maxdiff0; key-name explanation remains"
+    },
+    {
+      "gap": "algorithm_O1_extra_space",
+      "date": "2026-10-13",
+      "evidence": "../day7/al.cpp",
+      "validation": "set removed, fixed variables only; empty-input correctness pending"
+    },
+    {
+      "gap": "same_initial_lr_comparison",
+      "date": "2026-10-14",
+      "evidence": "../day8/closure_notes.md",
+      "validation": "saved evidence/static source and learner explanation as specified in review; not a runtime claim"
+    },
+    {
+      "gap": "DataLoader_samples_vs_features",
+      "date": "2026-10-14",
+      "evidence": "../day8/batch_practice.ipynb and closure_notes.md",
+      "validation": "saved evidence/static source and learner explanation as specified in review; not a runtime claim"
+    },
+    {
+      "gap": "state_dict_key_name_and_load_roles",
+      "date": "2026-10-14",
+      "evidence": "../day8/closure_notes.md",
+      "validation": "saved evidence/static source and learner explanation as specified in review; not a runtime claim"
+    },
+    {
+      "gap": "sorted_dedup_empty_input_logic",
+      "date": "2026-10-14",
+      "evidence": "../day8/algorithm_notes.md",
+      "validation": "saved evidence/static source and learner explanation as specified in review; not a runtime claim"
     }
   ],
   "mastery_gates": [
@@ -790,8 +1051,10 @@
       "target_date": "2026-10-17",
       "gate": "能解释求导和更新；小训练/恢复正确；Attention shape清楚；计时口径合理",
       "status": "partial",
-      "partial_evidence": "../day6/B_review_2026-10-12.md",
-      "remaining": "learner notes, parameter updates/training, restoration, Attention and timing gates not yet verified"
+      "partial_evidence": "../day9/review_2026-10-14.md",
+      "remaining": "Attention numerical practice passed; meaning/causal rationale and full forward/timing remain; algorithm source sync/runtime and short older notes remain",
+      "latest_attention_evidence": "../day8/C_review_2026-10-14.md",
+      "attention_status": "C practice saved-output passed; B meaning and C theory partial; no performance evidence"
     },
     {
       "id": "service",
@@ -848,6 +1111,45 @@
       "status": "self_report_complete_static_logic_passed_runtime_unverified",
       "platform_rating": null,
       "review_file": "reviews/weekly_2026-10-11.md"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "有序数组原地去重：读写位置与固定额外空间",
+      "source": "coach_beginner_problem_revision",
+      "file": "../day7/al.cpp",
+      "guide": "../day7/algorithm_dedup_guide.md",
+      "minutes": 40,
+      "actual_minutes": null,
+      "status": "O1_static_passed_empty_input_bug_runtime_unverified",
+      "platform_rating": null,
+      "review_file": "../day7/review_2026-10-13.md"
     }
-  ]
+  ],
+  "daily_material_policy": {
+    "effective_date": "2026-10-14",
+    "review_location": "next calendar assignment day folder",
+    "required_files": [
+      "README.md",
+      "review_YYYY-MM-DD.md",
+      "questions_answers.md",
+      "today_YYYY-MM-DD.md",
+      "guides for main blocks and algorithm",
+      "knowledge_interview.md"
+    ],
+    "question_sources": [
+      "current user report",
+      "learner notes in active day folder"
+    ],
+    "teaching_order": [
+      "purpose",
+      "bounded analogy",
+      "map to code or shapes",
+      "prediction",
+      "learner experiment",
+      "explanation"
+    ],
+    "source_policy": "official or primary links with exact sections, short Chinese explanations; interview practice not unsupported company/frequency claims",
+    "budget": "reading and Q&A included in existing daily budget",
+    "notification_schedule_unchanged": true
+  }
 }
